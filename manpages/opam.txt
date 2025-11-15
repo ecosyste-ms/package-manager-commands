@@ -1,0 +1,439 @@
+NAME
+       opam - source-based package management
+
+SYNOPSIS
+       opam COMMAND ...
+
+DESCRIPTION
+       Opam is a package manager. It uses the powerful mancoosi tools to
+       handle dependencies, including support for version constraints,
+       optional dependencies, and conflict management. The default
+       configuration binds it to the official package repository for OCaml.
+
+       It has support for different remote repositories such as HTTP, rsync,
+       git, darcs and mercurial. Everything is installed within a local opam
+       directory, that can include multiple installation prefixes with
+       different sets of intalled packages.
+
+       Use either opam <command> --help or opam help <command> for more
+       information on a specific command.
+
+COMMANDS
+       admin
+           Tools for repository administrators
+
+       clean
+           Cleans up opam caches
+
+       config
+           Display configuration options for packages.
+
+       env Prints appropriate shell variable assignments to stdout
+
+       exec
+           Executes a command in the proper opam environment
+
+       help
+           Display help about opam and opam commands.
+
+       init
+           Initialize opam state, or set init options.
+
+       install
+           Install a list of packages.
+
+       lint
+           Checks and validate package description ('opam') files.
+
+       list
+           Display the list of available packages.
+
+       pin Pin a given package to a specific version or source.
+
+       reinstall
+           Reinstall a list of packages.
+
+       remove
+           Remove a list of packages.
+
+       repository
+           Manage opam repositories.
+
+       show
+           Display information about specific packages.
+
+       source
+           Get the source of an opam package.
+
+       switch
+           Manage multiple installation prefixes.
+
+       update
+           Update the list of available packages.
+
+       upgrade
+           Upgrade the installed package to latest version.
+
+       var Prints the value associated with a given variable
+
+COMMAND ALIASES
+       info
+           An alias for show.
+
+       remote
+           An alias for repository.
+
+       search
+           An alias for list --search.
+
+       uninstall
+           An alias for remove.
+
+       unpin
+           An alias for pin remove.
+
+COMMON OPTIONS
+       These options are common to all commands.
+
+       --best-effort
+           Don't fail if all requested packages can't be installed: try to
+           install as many as possible. Note that not all external solvers
+           may support this option (recent versions of aspcud or mccs
+           should). This is equivalent to setting $OPAMBESTEFFORT environment
+           variable.
+
+       --color=WHEN
+           Colorize the output. WHEN must be one of `always', `never' or
+           `auto'.
+
+       --criteria=CRITERIA
+           Specify user preferences for dependency solving for this run.
+           Overrides both $OPAMCRITERIA and $OPAMUPGRADECRITERIA. For details
+           on the supported language, and the external solvers available, see
+           http://opam.ocaml.org/doc/External_solvers.html. A general guide
+           to using solver preferences can be found at
+           http://www.dicosmo.org/Articles/usercriteria.pdf.
+
+       --cudf=FILENAME
+           Debug option: Save the CUDF requests sent to the solver to
+           FILENAME-<n>.cudf.
+
+       --debug
+           Print debug message to stderr. This is equivalent to setting
+           $OPAMDEBUG to "true".
+
+       --debug-level=LEVEL
+           Like --debug, but allows specifying the debug level (--debug sets
+           it to 1). Equivalent to setting $OPAMDEBUG to a positive integer.
+
+       --git-version
+           Print the git version of opam, if set (i.e. you are using a
+           development version), and exit.
+
+       --help[=FMT] (default=auto)
+           Show this help in format FMT. The value FMT must be one of `auto',
+           `pager', `groff' or `plain'. With `auto', the format is `pager` or
+           `plain' whenever the TERM env var is `dumb' or undefined.
+
+       --ignore-pin-depends
+           Ignore extra pins required by packages that get pinned, either
+           manually through opam pin or through opam install DIR. This is
+           equivalent to setting IGNOREPINDEPENDS=true.
+
+       --json=FILENAME
+           Save the results of the opam run in a computer-readable file. If
+           the filename contains the character `%', it will be replaced by an
+           index that doesn't overwrite an existing file. Similar to setting
+           the $OPAMJSON variable.
+
+       --no-aspcud
+           Deprecated.
+
+       --no-auto-upgrade
+           When configuring or updating a repository that is written for an
+           earlier opam version (1.2), opam internally converts it to the
+           current format. This disables this behaviour. Note that
+           repositories should define their format version in a 'repo' file
+           at their root, or they will be assumed to be in the older format.
+           It is, in any case, preferable to upgrade the repositories
+           manually using opam admin upgrade [--mirror URL] when possible.
+
+       --no-self-upgrade
+           Opam will replace itself with a newer binary found at
+           OPAMROOT/opam if present. This disables this behaviour.
+
+       -q, --quiet
+           Disables --verbose.
+
+       --root=ROOT
+           Use ROOT as the current root path. This is equivalent to setting
+           $OPAMROOT to ROOT.
+
+       --safe, --readonly
+           Make sure nothing will be automatically updated or rewritten.
+           Useful for calling from completion scripts, for example. Will fail
+           whenever such an operation is needed ; also avoids waiting for
+           locks, skips interactive questions and overrides the $OPAMDEBUG
+           variable. This is equivalent to set environment variable
+           $OPAMSAFE.
+
+       --solver=CMD
+           Specify the CUDF solver to use for resolving package installation
+           problems. This is either a predefined solver (this version of opam
+           supports builtin-mccs+lp(), builtin-mccs+glpk, aspcud, mccs,
+           aspcud-old, packup), or a custom command that should contain the
+           variables %{input}%, %{output}%, %{criteria}%, and optionally
+           %{timeout}%. This is equivalent to setting $OPAMEXTERNALSOLVER.
+
+       --strict
+           Fail whenever an error is found in a package definition or a
+           configuration file. The default is to continue silently if
+           possible.
+
+       --switch=SWITCH
+           Use SWITCH as the current compiler switch. This is equivalent to
+           setting $OPAMSWITCH to SWITCH.
+
+       --use-internal-solver
+           Disable any external solver, and use the built-in one (this
+           requires that opam has been compiled with a built-in solver). This
+           is equivalent to setting $OPAMNOASPCUD or $OPAMUSEINTERNALSOLVER.
+
+       -v, --verbose
+           Be more verbose. One -v shows all package commands, repeat to also
+           display commands called internally (e.g. tar, curl, patch etc.)
+           Repeating n times is equivalent to setting $OPAMVERBOSE to "n".
+
+       --version
+           Show version information.
+
+       -w, --working-dir
+           Whenever updating packages that are bound to a local,
+           version-controlled directory, update to the current working state
+           of their source instead of the last committed state, or the ref
+           they are pointing to. This only affects packages explicitly listed
+           on the command-line.It can also be set with $OPAMWORKINGDIR. 
+
+       -y, --yes
+           Answer yes to all yes/no questions without prompting. This is
+           equivalent to setting $OPAMYES to "true".
+
+ENVIRONMENT VARIABLES
+       Opam makes use of the environment variables listed here. Boolean
+       variables should be set to "0", "no", "false" or the empty string to
+       disable, "1", "yes" or "true" to enable.
+
+       OPAMALLPARENS surround all filters with parenthesis
+
+       OPAMAUTOREMOVE see remove option `--auto-remove`
+
+       OPAMBESTEFFORT see option `--best-effort`
+
+       OPAMBESTEFFORTPREFIXCRITERIA sets the string that must be prepended to
+       the criteria when the `--best-effort` option is set, and is expected
+       to maximise the `opam-query` property in the solution 
+
+       OPAMCOLOR, when set to always or never, sets a default value for the
+       --color option.
+
+       OPAMCRITERIA specifies user preferences for dependency solving. The
+       default value depends on the solver version, use `config report` to
+       know the current setting. See also option --criteria
+
+       OPAMCUDFFILE file save the cudf graph to file-actions-explicit.dot
+
+       OPAMCURL can be used to select a given 'curl' program. See OPAMFETCH
+       for more options.
+
+       OPAMDEBUG see options `--debug' and `--debug-level'.
+
+       OPAMDOWNLOADJOBS sets the maximum number of simultaneous downloads.
+
+       OPAMDRYRUN see option `--dry-run`
+
+       OPAMEDITOR sets the editor to use for opam file editing, overrides
+       $EDITOR and $VISUAL
+
+       OPAMERRLOGLEN sets the number of log lines printed when a sub-process
+       fails. 0 to print all.
+
+       OPAMEXTERNALSOLVER see option `--solver'.
+
+       OPAMFAKE see option `--fake`
+
+       OPAMFETCH specifies how to download files: either `wget', `curl' or a
+       custom command where variables %{url}%, %{out}%, %{retry}%,
+       %{compress}% and %{checksum}% will be replaced. Overrides the
+       'download-command' value from the main config file.
+
+       OPAMFIXUPCRITERIA same as OPAMUPGRADECRITERIA, but specific to fixup
+
+       OPAMIGNORECONSTRAINTS see install option `--ignore-constraints-on`
+
+       OPAMIGNOREPINDEPENDS see option `--ignore-pin-depends`
+
+       OPAMJOBS sets the maximum number of parallel workers to run.
+
+       OPAMJSON log json output to the given file (use character `%' to index
+       the files)
+
+       OPAMLOCKED see install option `--locked`
+
+       OPAMLOGS logdir sets log directory, default is a temporary directory
+       in /tmp
+
+       OPAMMAKECMD set the system make command to use
+
+       OPAMNOAUTOUPGRADE disables automatic internal upgrade of repositories
+       in an earlier format to the current one, on 'update' or 'init'.
+
+       OPAMKEEPLOGS tells opam to not remove some temporary command logs and
+       some backups. This skips some finalisers and may also help to get more
+       reliable backtraces
+
+       OPAMLOCKRETRIES sets the number of tries after which opam gives up
+       acquiring its lock and fails. <= 0 means infinite wait.
+
+       OPAMMERGEOUT merge process outputs, stderr on stdout
+
+       OPAMNO answer no to any question asked.
+
+       OPAMNOASPCUD Deprecated.
+
+       OPAMNOCHECKSUMS enables option --no-checksums when available.
+
+       OPAMNOSELFUPGRADE see option `--no-self-upgrade'.
+
+       OPAMPINKINDAUTO sets whether version control systems should be
+       detected when pinning to a local path. Enabled by default since 1.3.0.
+
+       OPAMPRECISETRACKING fine grain tracking of directories
+
+       OPAMREQUIRECHECKSUMS Enables option `--require-checksums' when
+       available (e.g. for `opam install`).
+
+       OPAMRETRES sets the number of tries before failing downloads.
+
+       OPAMROOT see option `--root'. This is automatically set by `opam env
+       --root=DIR --set-root'.
+
+       OPAMROOTISOK don't complain when running as root.
+
+       OPAMSAFE see option `--safe'
+
+       OPAMSHOW see option `--show`
+
+       OPAMSKIPUPDATE see option `--skip-updates`
+
+       OPAMSKIPVERSIONCHECKS bypasses some version checks. Unsafe, for
+       compatibility testing only.
+
+       OPAMSOLVERTIMEOUT change the time allowance of the solver. Default is
+       60.0, set to 0 for unlimited. Note that all solvers may not support
+       this option.
+
+       OPAMSTATUSLINE display a dynamic status line showing what's currently
+       going on on the terminal. (one of one of `always', `never' or `auto')
+
+       OPAMSTATS display stats at the end of command
+
+       OPAMSTRICT fail on inconsistencies (file reading, switch import, etc.)
+
+       OPAMSWITCH see option `--switch'. Automatically set by `opam env
+       --switch=SWITCH --set-switch'.
+
+       OPAMUNLOCKBASE see install option `--unlock-base`
+
+       OPAMUPGRADECRITERIA specifies user preferences for dependency solving
+       when performing an upgrade. Overrides OPAMCRITERIA in upgrades if both
+       are set. See also option --criteria
+
+       OPAMUSEINTERNALSOLVER see option `--use-internal-solver'.
+
+       OPAMUSEOPENSSL force openssl use for hash computing
+
+       OPAMUTF8 use UTF8 characters in output (one of one of `always',
+       `never' or `auto'). By default `auto', which is determined from the
+       locale).
+
+       OPAMUTF8MSGS use extended UTF8 characters (camels) in opam messages.
+       Implies OPAMUTF8. This is set by default on OSX only.
+
+       OPAMVALIDATIONHOOK hook if set, uses the `%{hook%}` command to
+       validate an opam repository update
+
+       OPAMVAR_var overrides the contents of the variable var when
+       substituting `%{var}%` strings in `opam` files.
+
+       OPAMVAR_package_var overrides the contents of the variable package:var
+       when substituting `%{package:var}%` strings in `opam` files.
+
+       OPAMVERBOSE see option `--verbose'.
+
+       OPAMWORKINGDIR see option `--working-dir`
+
+       OPAMYES see option `--yes'.
+
+EXIT STATUS
+       As an exception to the following, the `exec' command returns 127 if
+       the command was not found or couldn't be executed, and the command's
+       exit value otherwise.
+
+       0   Success, or true for boolean queries.
+
+       1   False. Returned when a boolean return value is expected, e.g. when
+           running with --check, or for queries like opam lint.
+
+       2   Bad command-line arguments, or command-line arguments pointing to
+           an invalid context (e.g. file not following the expected format).
+
+       5   Not found. You requested something (package, version, repository,
+           etc.) that couldn't be found.
+
+       10  Aborted. The operation required confirmation, which wasn't given.
+
+       15  Could not acquire the locks required for the operation.
+
+       20  There is no solution to the user request. This can be caused by
+           asking to install two incompatible packages, for example.
+
+       30  Error in package definition, or other metadata files. Using
+           --strict raises this error more often.
+
+       31  Package script error. Some package operations were unsuccessful.
+           This may be an error in the packages or an incompatibility with
+           your system. This can be a partial error.
+
+       40  Sync error. Could not fetch some remotes from the network. This
+           can be a partial error.
+
+       50  Configuration error. Opam or system configuration doesn't allow
+           operation, and needs fixing.
+
+       60  Solver failure. The solver failed to return a sound answer. It can
+           be due to a broken external solver, or an error in solver
+           configuration.
+
+       99  Internal error. Something went wrong, likely due to a bug in opam
+           itself.
+
+       130 User interrupt. SIGINT was received, generally due to the user
+           pressing Ctrl-C.
+FURTHER DOCUMENTATION
+       See https://opam.ocaml.org/doc.
+
+AUTHORS
+       Vincent Bernardoff <vb@luminar.eu.org>
+       Raja Boujbel <raja.boujbel@ocamlpro.com>
+       Roberto Di Cosmo <roberto@dicosmo.org>
+       Thomas Gazagnaire <thomas@gazagnaire.org>
+       Louis Gesbert <louis.gesbert@ocamlpro.com>
+       Fabrice Le Fessant <Fabrice.Le_fessant@inria.fr>
+       Anil Madhavapeddy <anil@recoil.org>
+       Guillem Rieu <guillem.rieu@ocamlpro.com>
+       Ralf Treinen <ralf.treinen@pps.jussieu.fr>
+       Frederic Tuong <tuong@users.gforge.inria.fr>
+
+BUGS
+       Check bug reports at https://github.com/ocaml/opam/issues.
+

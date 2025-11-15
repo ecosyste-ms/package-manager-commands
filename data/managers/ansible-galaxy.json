@@ -1,0 +1,14 @@
+{
+  "name": "ansible-galaxy",
+  "ecosystem": "Infrastructure",
+  "description": "Ansible role and collection manager",
+  "commands": {
+    "install": "ansible-galaxy install [role]",
+    "remove": "ansible-galaxy remove [role]",
+    "list": "ansible-galaxy list",
+    "search": "ansible-galaxy search [query]",
+    "info": "ansible-galaxy info [role]",
+    "init": "ansible-galaxy init [role]",
+    "help": "ansible-galaxy --help"
+  }
+}

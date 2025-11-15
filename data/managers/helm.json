@@ -1,0 +1,17 @@
+{
+  "name": "helm",
+  "ecosystem": "Kubernetes",
+  "description": "Kubernetes package manager",
+  "commands": {
+    "install": "helm install [name] [chart]",
+    "uninstall": "helm uninstall [name]",
+    "upgrade": "helm upgrade [name] [chart]",
+    "search": "helm search [query]",
+    "list": "helm list",
+    "repo-add": "helm repo add [name] [url]",
+    "repo-update": "helm repo update",
+    "repo-list": "helm repo list",
+    "show": "helm show [chart]",
+    "help": "helm --help"
+  }
+}

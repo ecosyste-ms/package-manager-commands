@@ -1,0 +1,27 @@
+{
+  "name": "gem",
+  "ecosystem": "Ruby",
+  "description": "RubyGems package manager",
+  "commands": {
+    "install": "gem install [package]",
+    "uninstall": "gem uninstall [package]",
+    "update": "gem update [package]",
+    "self-update": "gem update --system",
+    "search": "gem search [query]",
+    "info": "gem info [package]",
+    "list": "gem list",
+    "outdated": "gem outdated",
+    "build": "gem build [gemspec]",
+    "push": "gem push [gem]",
+    "yank": "gem yank [package]",
+    "owner": "gem owner <subcommand>",
+    "signin": "gem signin",
+    "signout": "gem signout",
+    "fetch": "gem fetch [package]",
+    "cleanup": "gem cleanup",
+    "dependency": "gem dependency [package]",
+    "lock": "gem lock [package]",
+    "which": "gem which [library]",
+    "help": "gem help [command]"
+  }
+}

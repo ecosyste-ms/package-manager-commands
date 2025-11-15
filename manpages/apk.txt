@@ -1,0 +1,34 @@
+apk-tools 2.14.9, compiled for aarch64.
+
+usage: apk [<OPTIONS>...] COMMAND [<ARGUMENTS>...]
+
+Package installation and removal:
+  add        Add or modify constraints in WORLD and commit changes
+  del        Remove constraints from WORLD and commit changes
+
+System maintenance:
+  fix        Fix, reinstall or upgrade packages without modifying WORLD
+  update     Update repository indexes
+  upgrade    Install upgrades available from repositories
+  cache      Manage the local package cache
+
+Querying package information:
+  info       Give detailed information about packages or repositories
+  list       List packages matching a pattern or other criteria
+  dot        Render dependencies as graphviz graphs
+  policy     Show repository policy for packages
+  search     Search for packages by name or description
+
+Repository maintenance:
+  index      Create repository index file from packages
+  fetch      Download packages from repositories to a local directory
+  manifest   Show checksums of package contents
+  verify     Verify package integrity and signature
+
+Miscellaneous:
+  audit      Audit system for changes
+  stats      Show statistics about repositories and installations
+  version    Compare package versions or perform tests on version strings
+
+This apk has coffee making abilities.
+For more information: man 8 apk

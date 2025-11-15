@@ -1,0 +1,20 @@
+{
+  "name": "opam",
+  "ecosystem": "OCaml",
+  "description": "OCaml package manager",
+  "commands": {
+    "install": "opam install [package]",
+    "remove": "opam remove [package]",
+    "update": "opam update",
+    "upgrade": "opam upgrade",
+    "list": "opam list",
+    "search": "opam search [query]",
+    "show": "opam show [package]",
+    "info": "opam info [package]",
+    "init": "opam init",
+    "clean": "opam clean",
+    "config": "opam config",
+    "exec": "opam exec [command]",
+    "help": "opam --help"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "nuget",
+  "ecosystem": ".NET",
+  "description": "NuGet package manager for .NET",
+  "commands": {
+    "add": "dotnet nuget add source [url]",
+    "remove": "dotnet nuget remove source [name]",
+    "list": "dotnet nuget list source",
+    "enable": "dotnet nuget enable source [name]",
+    "disable": "dotnet nuget disable source [name]",
+    "push": "dotnet nuget push [package]",
+    "delete": "dotnet nuget delete [package]",
+    "locals": "dotnet nuget locals all --clear",
+    "why": "dotnet nuget why [package]",
+    "help": "dotnet nuget --help"
+  }
+}

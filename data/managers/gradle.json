@@ -1,0 +1,15 @@
+{
+  "name": "gradle",
+  "ecosystem": "Java",
+  "description": "Gradle build automation tool",
+  "commands": {
+    "build": "gradle build",
+    "clean": "gradle clean",
+    "test": "gradle test",
+    "tasks": "gradle tasks",
+    "dependencies": "gradle dependencies",
+    "init": "gradle init",
+    "run": "gradle run",
+    "help": "gradle --help"
+  }
+}

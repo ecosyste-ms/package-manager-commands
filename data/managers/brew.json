@@ -1,0 +1,22 @@
+{
+  "name": "brew",
+  "ecosystem": "macOS/Linux",
+  "description": "Homebrew package manager",
+  "commands": {
+    "install": "brew install [formula]",
+    "uninstall": "brew uninstall [formula]",
+    "update": "brew update",
+    "upgrade": "brew upgrade [formula]",
+    "search": "brew search [query]",
+    "info": "brew info [formula]",
+    "list": "brew list",
+    "outdated": "brew outdated",
+    "doctor": "brew doctor",
+    "cleanup": "brew cleanup",
+    "link": "brew link [formula]",
+    "unlink": "brew unlink [formula]",
+    "config": "brew config",
+    "version": "brew --version",
+    "help": "brew help [command]"
+  }
+}

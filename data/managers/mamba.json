@@ -1,0 +1,16 @@
+{
+  "name": "mamba",
+  "ecosystem": "Python",
+  "description": "Fast drop-in replacement for conda",
+  "commands": {
+    "install": "mamba install [package]",
+    "remove": "mamba remove [package]",
+    "update": "mamba update [package]",
+    "search": "mamba search [query]",
+    "list": "mamba list",
+    "create": "mamba create -n [env]",
+    "clean": "mamba clean --all",
+    "info": "mamba info",
+    "help": "mamba --help"
+  }
+}

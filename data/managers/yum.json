@@ -1,0 +1,18 @@
+{
+  "name": "yum",
+  "ecosystem": "System (RHEL/CentOS)",
+  "description": "Yellowdog Updater Modified package manager",
+  "commands": {
+    "install": "yum install [package]",
+    "remove": "yum remove [package]",
+    "update": "yum update [package]",
+    "upgrade": "yum upgrade",
+    "search": "yum search [query]",
+    "info": "yum info [package]",
+    "list": "yum list",
+    "list-installed": "yum list installed",
+    "check-update": "yum check-update",
+    "clean": "yum clean all",
+    "help": "yum --help"
+  }
+}

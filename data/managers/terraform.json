@@ -1,0 +1,16 @@
+{
+  "name": "terraform",
+  "ecosystem": "Infrastructure",
+  "description": "Infrastructure as Code tool",
+  "commands": {
+    "init": "terraform init",
+    "plan": "terraform plan",
+    "apply": "terraform apply",
+    "destroy": "terraform destroy",
+    "validate": "terraform validate",
+    "fmt": "terraform fmt",
+    "format": "terraform fmt",
+    "providers": "terraform providers",
+    "help": "terraform --help"
+  }
+}

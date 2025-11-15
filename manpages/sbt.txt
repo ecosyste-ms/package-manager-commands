@@ -1,0 +1,4 @@
+Unable to find image 'sbtscala/scala-sbt:latest' locally
+docker: Error response from daemon: manifest for sbtscala/scala-sbt:latest not found: manifest unknown: manifest unknown
+
+Run 'docker run --help' for more information

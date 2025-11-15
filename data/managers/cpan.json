@@ -1,0 +1,13 @@
+{
+  "name": "cpan",
+  "ecosystem": "Perl",
+  "description": "Comprehensive Perl Archive Network client",
+  "commands": {
+    "install": "cpan [module]",
+    "remove": "cpan -U [module]",
+    "update": "cpan -r",
+    "search": "cpan -a [query]",
+    "info": "cpan -D [module]",
+    "help": "cpan -h"
+  }
+}

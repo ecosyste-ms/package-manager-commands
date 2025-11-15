@@ -1,0 +1,44 @@
+mix                   # Runs the default task (current: "mix run")
+mix app.config        # Configures all registered apps
+mix app.start         # Starts all registered apps
+mix app.tree          # Prints the application tree
+mix archive           # Lists installed archives
+mix archive.build     # Archives this project into a .ez file
+mix archive.install   # Installs an archive locally
+mix archive.uninstall # Uninstalls archives
+mix clean             # Deletes generated application files
+mix cmd               # Executes the given command
+mix compile           # Compiles source files
+mix deps              # Lists dependencies and their status
+mix deps.clean        # Deletes the given dependencies' files
+mix deps.compile      # Compiles dependencies
+mix deps.get          # Fetches unavailable and out of date dependencies
+mix deps.tree         # Prints the dependency tree
+mix deps.unlock       # Unlocks the given dependencies
+mix deps.update       # Updates the given dependencies
+mix do                # Executes the tasks separated by plus
+mix escript           # Lists installed escripts
+mix escript.build     # Builds an escript for the project
+mix escript.install   # Installs an escript locally
+mix escript.uninstall # Uninstalls escripts
+mix eval              # Evaluates the given code
+mix format            # Formats the given files/patterns
+mix help              # Prints help information for tasks, aliases, modules, and applications
+mix loadconfig        # Loads and persists the given configuration
+mix local             # Lists tasks installed locally via archives
+mix local.hex         # Installs Hex locally
+mix local.rebar       # Installs Rebar locally
+mix new               # Creates a new Elixir project
+mix profile.cprof     # Profiles the given file or expression with cprof
+mix profile.eprof     # Profiles the given file or expression with eprof
+mix profile.fprof     # Profiles the given file or expression with fprof
+mix profile.tprof     # Profiles the given file or expression with tprof
+mix release           # Assembles a self-contained release
+mix release.init      # Generates sample files for releases
+mix run               # Runs the current application
+mix test              # Runs a project's tests
+mix test.coverage     # Build report from exported test coverage
+mix xref              # Prints cross reference information
+iex -S mix            # Starts IEx and runs the default task
+
+Use "mix help <TASK>" for more information on a particular command.

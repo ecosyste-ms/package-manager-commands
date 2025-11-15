@@ -1,0 +1,12 @@
+{
+  "name": "cpanm",
+  "ecosystem": "Perl",
+  "description": "cpanminus - fast CPAN module installer",
+  "commands": {
+    "install": "cpanm [module]",
+    "uninstall": "cpanm -U [module]",
+    "info": "cpanm --info [module]",
+    "self-update": "cpanm --self-upgrade",
+    "help": "cpanm --help"
+  }
+}

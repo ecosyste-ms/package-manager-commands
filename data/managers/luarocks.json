@@ -1,0 +1,16 @@
+{
+  "name": "luarocks",
+  "ecosystem": "Lua",
+  "description": "Lua package manager",
+  "commands": {
+    "install": "luarocks install [rock]",
+    "remove": "luarocks remove [rock]",
+    "search": "luarocks search [query]",
+    "list": "luarocks list",
+    "show": "luarocks show [rock]",
+    "build": "luarocks build",
+    "pack": "luarocks pack [rock]",
+    "upload": "luarocks upload [rock]",
+    "help": "luarocks --help"
+  }
+}

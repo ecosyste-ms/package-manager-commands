@@ -1,0 +1,21 @@
+{
+  "name": "conda",
+  "ecosystem": "Python",
+  "description": "Package, dependency and environment management",
+  "commands": {
+    "install": "conda install [package]",
+    "remove": "conda remove [package]",
+    "update": "conda update [package]",
+    "upgrade": "conda upgrade [package]",
+    "search": "conda search [query]",
+    "info": "conda info",
+    "list": "conda list",
+    "create": "conda create -n [env]",
+    "activate": "conda activate [env]",
+    "deactivate": "conda deactivate",
+    "clean": "conda clean --all",
+    "config": "conda config",
+    "doctor": "conda doctor",
+    "help": "conda --help"
+  }
+}

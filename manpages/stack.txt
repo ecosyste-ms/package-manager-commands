@@ -1,0 +1,186 @@
+stack - The Haskell Tool Stack
+
+Usage: stack [-h|--help] [--version] [--numeric-version] 
+             [--hpack-numeric-version] [--docker*] [--nix*] 
+             [--verbosity VERBOSITY | (-v|--verbose) | --silent] 
+             [--[no-]time-in-log] [--[no-]rsl-in-log] [--[no-]plan-in-log] 
+             [--stack-root STACK-ROOT] [--work-dir WORK-DIR] [--[no-]system-ghc]
+             [--[no-]install-ghc] [--arch ARCH] [--ghc-variant VARIANT] 
+             [--ghc-build BUILD] [-j|--jobs JOBS] [--extra-include-dirs DIR] 
+             [--extra-lib-dirs DIR] [--custom-preprocessor-extensions EXT] 
+             [--with-gcc PATH-TO-GCC] [--with-hpack HPACK] [--[no-]hpack-force] 
+             [--[no-]skip-ghc-check] [--[no-]skip-msys] [--local-bin-path DIR] 
+             [--setup-info-yaml URL] [--[no-]modify-code-page] 
+             [--[no-]allow-different-user] [--[no-]dump-logs] 
+             [--color|--colour WHEN] [--snapshot-location-base URL] 
+             [--[no-]script-no-run-compile] [--resolver|--snapshot SNAPSHOT] 
+             [--compiler COMPILER] [--[no-]terminal] 
+             [--stack-colors|--stack-colours STYLES] [--terminal-width INT] 
+             [--stack-yaml STACK-YAML] [--lock-file ARG] COMMAND|FILE
+
+Available options:
+  -h,--help                Show this help text.
+  --version                Show version.
+  --numeric-version        Show only version number.
+  --hpack-numeric-version  Show only Hpack's version number.
+  --docker*                Run 'stack --docker-help' for details.
+  --nix*                   Run 'stack --nix-help' for details.
+  --verbosity VERBOSITY    Set verbosity level: silent, error, warn, info or
+                           debug.
+  -v,--verbose             Enable verbose mode: verbosity level "debug".
+  --silent                 Enable silent mode: verbosity level "silent".
+  --[no-]time-in-log       Enable/disable inclusion of timings in logs, for the
+                           purposes of using diff with logs. (default: enabled)
+  --[no-]rsl-in-log        Enable/disable inclusion of raw snapshot layer (rsl)
+                           in logs. (default: disabled)
+  --[no-]plan-in-log       Enable/disable inclusion of information about build
+                           plan construction in logs. (default: disabled)
+  --stack-root STACK-ROOT  Absolute path to the global Stack root directory.
+                           Overrides any STACK_ROOT environment variable.
+  --work-dir WORK-DIR      Relative path to Stack's work directory. Overrides
+                           any STACK_WORK environment variable. (default:
+                           '.stack-work')
+  --[no-]system-ghc        Enable/disable using the system installed GHC (on the
+                           PATH) if it is available and its version matches.
+                           (default: disabled)
+  --[no-]install-ghc       Enable/disable downloading and installing GHC if
+                           necessary. (Can be done manually with 'stack setup'.)
+                           (default: enabled)
+  --arch ARCH              System architecture, e.g. i386, x86_64, aarch64.
+  --ghc-variant VARIANT    Specialized GHC variant, e.g. int-native or
+                           integersimple (incompatible with --system-ghc).
+  --ghc-build BUILD        Specialized GHC build, e.g. 'gmp4' or 'standard'
+                           (usually auto-detected).
+  -j,--jobs JOBS           Number of concurrent jobs to run.
+  --extra-include-dirs DIR Extra directories to check for C header files.
+  --extra-lib-dirs DIR     Extra directories to check for libraries.
+  --custom-preprocessor-extensions EXT
+                           Extensions used for custom preprocessors.
+  --with-gcc PATH-TO-GCC   Use gcc found at PATH-TO-GCC.
+  --with-hpack HPACK       Use HPACK executable (overrides bundled Hpack).
+  --[no-]hpack-force       Enable/disable overwriting of Cabal files that have
+                           been modified manually. (default: disabled)
+  --[no-]skip-ghc-check    Enable/disable skipping the GHC version and
+                           architecture check. (default: disabled)
+  --[no-]skip-msys         Enable/disable skipping the local MSYS installation
+                           (Windows only). (default: disabled)
+  --local-bin-path DIR     Override the target directory for 'stack build
+                           --copy-bins' and 'stack install'. DIR can be an
+                           absolute path or one relative to the current
+                           directory.
+  --setup-info-yaml URL    Alternate URL or path (relative or absolute) for
+                           Stack dependencies.
+  --[no-]modify-code-page  Enable/disable setting the codepage to support UTF-8
+                           (Windows only). (default: enabled)
+  --[no-]allow-different-user
+                           Enable/disable permission for users other than the
+                           owner of the Stack root directory to use a Stack
+                           installation (POSIX only). (default: inside Docker,
+                           true; otherwise, false)
+  --[no-]dump-logs         Enable/disable dump the build output logs for project
+                           packages to the console. (default: dump warning logs)
+  --color,--colour WHEN    Specify when to use color in output; WHEN is
+                           'always', 'never', or 'auto'. On Windows versions
+                           before Windows 10, for terminals that do not support
+                           color codes, the default is 'never'; color may work
+                           on terminals that support color codes.
+  --snapshot-location-base URL
+                           The base location of LTS/Nightly snapshots.
+  --[no-]script-no-run-compile
+                           Enable/disable the use of options `--no-run
+                           --compile` with `stack script`. (default: disabled)
+  --resolver,--snapshot SNAPSHOT
+                           Override snapshot in the project configuration file.
+  --compiler COMPILER      Use the specified compiler.
+  --[no-]terminal          Enable/disable overriding terminal detection in the
+                           case of running in a false terminal.
+  --stack-colors,--stack-colours STYLES
+                           Specify Stack's output styles; STYLES is a
+                           colon-delimited sequence of key=value, where 'key' is
+                           a style name and 'value' is a semicolon-delimited
+                           list of 'ANSI' SGR (Select Graphic Rendition) control
+                           codes (in decimal). Use 'stack ls stack-colors
+                           --basic' to see the current sequence. In shells where
+                           a semicolon is a command separator, enclose STYLES in
+                           quotes.
+  --terminal-width INT     Specify the width of the terminal, used for
+                           pretty-print messages.
+  --stack-yaml STACK-YAML  Override project stack.yaml file (overrides any
+                           STACK_YAML environment variable).
+  --lock-file ARG          Specify how to interact with lock files. (default: if
+                           snapshot is overridden: read-only; otherwise:
+                           read/write)
+
+Available commands:
+  build                    Build the package(s) in this directory/configuration.
+  install                  Shortcut for 'build --copy-bins'.
+  uninstall                Show how to uninstall Stack or a Stack-supplied tool.
+                           This command does not itself uninstall Stack or a
+                           Stack-supplied tool.
+  test                     Shortcut for 'build --test'.
+  bench                    Shortcut for 'build --bench'.
+  haddock                  Shortcut for 'build --haddock'.
+  new                      Create a new project from a template. Run 'stack
+                           templates' to see available templates. A local file
+                           or a remote URL can be specified as a template. Will
+                           initialise if there is no stack.yaml file.
+                           Initialisation may be forced. If a snapshot is
+                           specified at the command line, initialisation will
+                           try to use it.
+  templates                Show how to find templates available for 'stack new'.
+                           'stack new' can accept a template from a remote
+                           repository (default: github), local file or remote
+                           URL. Note: this downloads the help file.
+  init                     Create Stack project configuration from Cabal or
+                           Hpack package specifications. If a snapshot is
+                           specified at the command line, the command will try
+                           to use it.
+  setup                    Get the appropriate GHC for your project.
+  path                     Print out handy path information.
+  ls                       List command. (Supports snapshots, global packages,
+                           dependencies, Stack's styles and installed tools.)
+  unpack                   Unpack one or more packages, or one or more package
+                           candidates, locally.
+  update                   Update the package index.
+  upgrade                  Upgrade Stack, installing to Stack's local-bin
+                           directory and, if different and permitted, the
+                           directory of the current Stack executable.
+  upload                   Upload one or more packages, or documentation for one
+                           or more packages, to Hackage.
+  sdist                    Create source distribution tarballs.
+  dot                      Visualize your project's dependency graph using
+                           Graphviz dot.
+  ghc                      Run ghc.
+  hoogle                   Run hoogle, the Haskell API search engine. Use the
+                           '-- ARGUMENT(S)' syntax to pass Hoogle arguments,
+                           e.g. 'stack hoogle -- --count=20', or 'stack hoogle
+                           -- server --local'.
+  exec                     Execute a command. If the command is absent, the
+                           first of any arguments is taken as the command.
+  run                      Build and run an executable. Defaults to the first
+                           available executable if none is provided as the first
+                           argument.
+  ghci                     Run ghci in the context of package(s).
+  repl                     Run ghci in the context of package(s) (alias for
+                           'ghci').
+  runghc                   Run runghc.
+  runhaskell               Run runghc (alias for 'runghc').
+  script                   Run a Stack script.
+  eval                     Evaluate some Haskell code inline. Shortcut for
+                           'stack exec ghc -- -e CODE'.
+  clean                    Delete build artefacts for the project packages.
+  purge                    Delete the project Stack working directories
+                           (.stack-work by default). Shortcut for 'stack clean
+                           --full'.
+  query                    Query general build information (experimental).
+  list                     List package versions included in the package index,
+                           or in a specified snapshot (directly or indirectly).
+  ide                      IDE-specific commands.
+  docker                   Subcommands specific to Docker use.
+  config                   Subcommands for accessing and modifying configuration
+                           values.
+  hpc                      Subcommands specific to Haskell Program Coverage.
+
+Stack's documentation is available at https://docs.haskellstack.org/. Command
+'stack COMMAND --help' for help about a Stack command. Stack also supports the
+Haskell Error Index at https://errors.haskell.org/.

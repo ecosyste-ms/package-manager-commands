@@ -1,0 +1,23 @@
+{
+  "name": "bundler",
+  "ecosystem": "Ruby",
+  "description": "Ruby dependency management",
+  "commands": {
+    "install": "bundle install",
+    "add": "bundle add [gem]",
+    "remove": "bundle remove [gem]",
+    "update": "bundle update [gem]",
+    "info": "bundle show [gem]",
+    "list": "bundle list",
+    "outdated": "bundle outdated",
+    "init": "bundle init",
+    "exec": "bundle exec [command]",
+    "check": "bundle check",
+    "lock": "bundle lock",
+    "cache": "bundle cache",
+    "config": "bundle config",
+    "clean": "bundle clean",
+    "doctor": "bundle doctor",
+    "help": "bundle help [command]"
+  }
+}

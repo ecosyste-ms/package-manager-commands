@@ -1,0 +1,28 @@
+{
+  "name": "pnpm",
+  "ecosystem": "JavaScript",
+  "description": "Fast, disk space efficient package manager",
+  "commands": {
+    "install": "pnpm add [package]",
+    "uninstall": "pnpm remove [package]",
+    "update": "pnpm update [package]",
+    "search": "pnpm search [query]",
+    "info": "pnpm view [package]",
+    "list": "pnpm list",
+    "outdated": "pnpm outdated",
+    "init": "pnpm init",
+    "run": "pnpm run [script]",
+    "exec": "pnpm exec [command]",
+    "test": "pnpm test",
+    "publish": "pnpm publish",
+    "login": "pnpm login",
+    "logout": "pnpm logout",
+    "link": "pnpm link [package]",
+    "unlink": "pnpm unlink [package]",
+    "config": "pnpm config <subcommand>",
+    "audit": "pnpm audit",
+    "licenses": "pnpm licenses",
+    "why": "pnpm why [package]",
+    "help": "pnpm help [command]"
+  }
+}

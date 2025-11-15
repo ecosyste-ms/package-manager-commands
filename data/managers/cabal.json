@@ -1,0 +1,24 @@
+{
+  "name": "cabal",
+  "ecosystem": "Haskell",
+  "description": "Haskell package build system",
+  "commands": {
+    "update": "cabal update",
+    "install": "cabal install [package]",
+    "build": "cabal build",
+    "clean": "cabal clean",
+    "test": "cabal test",
+    "run": "cabal run",
+    "repl": "cabal repl",
+    "init": "cabal init",
+    "configure": "cabal configure",
+    "list": "cabal list [package]",
+    "info": "cabal info [package]",
+    "fetch": "cabal fetch [package]",
+    "freeze": "cabal freeze",
+    "outdated": "cabal outdated",
+    "upload": "cabal upload",
+    "check": "cabal check",
+    "help": "cabal --help"
+  }
+}

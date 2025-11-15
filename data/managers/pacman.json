@@ -1,0 +1,17 @@
+{
+  "name": "pacman",
+  "ecosystem": "System (Arch Linux)",
+  "description": "Pacman package manager for Arch Linux",
+  "commands": {
+    "install": "pacman -S [package]",
+    "remove": "pacman -R [package]",
+    "update": "pacman -Sy",
+    "upgrade": "pacman -Syu",
+    "search": "pacman -Ss [query]",
+    "info": "pacman -Si [package]",
+    "list": "pacman -Q",
+    "list-installed": "pacman -Qe",
+    "clean": "pacman -Sc",
+    "help": "pacman --help"
+  }
+}

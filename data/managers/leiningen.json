@@ -1,0 +1,17 @@
+{
+  "name": "leiningen",
+  "ecosystem": "Clojure",
+  "description": "Clojure build and dependency management tool",
+  "commands": {
+    "new": "lein new [project]",
+    "deps": "lein deps",
+    "run": "lein run",
+    "test": "lein test",
+    "repl": "lein repl",
+    "compile": "lein compile",
+    "clean": "lein clean",
+    "install": "lein install",
+    "deploy": "lein deploy",
+    "help": "lein help"
+  }
+}

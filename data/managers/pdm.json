@@ -1,0 +1,28 @@
+{
+  "name": "pdm",
+  "ecosystem": "Python",
+  "description": "Modern Python package manager with PEP 582 support",
+  "commands": {
+    "add": "pdm add [package]",
+    "remove": "pdm remove [package]",
+    "install": "pdm install",
+    "update": "pdm update [package]",
+    "list": "pdm list",
+    "show": "pdm show [package]",
+    "outdated": "pdm outdated",
+    "search": "pdm search [query]",
+    "lock": "pdm lock",
+    "sync": "pdm sync",
+    "init": "pdm init",
+    "new": "pdm new [project]",
+    "build": "pdm build",
+    "publish": "pdm publish",
+    "run": "pdm run [script]",
+    "export": "pdm export",
+    "import": "pdm import",
+    "info": "pdm info",
+    "cache": "pdm cache clear",
+    "config": "pdm config",
+    "help": "pdm --help"
+  }
+}

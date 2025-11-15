@@ -1,0 +1,21 @@
+{
+  "name": "pip",
+  "ecosystem": "Python",
+  "description": "Python package installer",
+  "commands": {
+    "install": "pip install [package]",
+    "uninstall": "pip uninstall [package]",
+    "search": "pip search [query]",
+    "info": "pip show [package]",
+    "list": "pip list",
+    "outdated": "pip list --outdated",
+    "freeze": "pip freeze",
+    "download": "pip download [package]",
+    "check": "pip check",
+    "config": "pip config <subcommand>",
+    "cache": "pip cache <subcommand>",
+    "hash": "pip hash [file]",
+    "inspect": "pip inspect",
+    "help": "pip help [command]"
+  }
+}

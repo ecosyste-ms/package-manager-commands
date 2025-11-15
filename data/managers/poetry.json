@@ -1,0 +1,25 @@
+{
+  "name": "poetry",
+  "ecosystem": "Python",
+  "description": "Python dependency management and packaging",
+  "commands": {
+    "install": "poetry install",
+    "add": "poetry add [package]",
+    "remove": "poetry remove [package]",
+    "update": "poetry update [package]",
+    "show": "poetry show [package]",
+    "search": "poetry search [query]",
+    "init": "poetry init",
+    "new": "poetry new [project]",
+    "run": "poetry run [command]",
+    "build": "poetry build",
+    "publish": "poetry publish",
+    "lock": "poetry lock",
+    "check": "poetry check",
+    "config": "poetry config",
+    "cache": "poetry cache clear",
+    "self-update": "poetry self update",
+    "version": "poetry version",
+    "help": "poetry help [command]"
+  }
+}

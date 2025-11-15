@@ -1,0 +1,20 @@
+{
+  "name": "rebar3",
+  "ecosystem": "Erlang",
+  "description": "Erlang build tool and package manager",
+  "commands": {
+    "new": "rebar3 new [template] [name]",
+    "compile": "rebar3 compile",
+    "clean": "rebar3 clean",
+    "test": "rebar3 test",
+    "release": "rebar3 release",
+    "deps": "rebar3 deps",
+    "get-deps": "rebar3 get-deps",
+    "update": "rebar3 update",
+    "upgrade": "rebar3 upgrade",
+    "tree": "rebar3 tree",
+    "unlock": "rebar3 unlock",
+    "shell": "rebar3 shell",
+    "help": "rebar3 help"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "rbenv",
+  "ecosystem": "Ruby",
+  "description": "Ruby version manager",
+  "commands": {
+    "install": "rbenv install [version]",
+    "uninstall": "rbenv uninstall [version]",
+    "versions": "rbenv versions",
+    "version": "rbenv version",
+    "global": "rbenv global [version]",
+    "local": "rbenv local [version]",
+    "shell": "rbenv shell [version]",
+    "rehash": "rbenv rehash",
+    "which": "rbenv which [command]",
+    "whence": "rbenv whence [command]",
+    "help": "rbenv help [command]"
+  }
+}

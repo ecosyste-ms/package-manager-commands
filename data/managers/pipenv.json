@@ -1,0 +1,17 @@
+{
+  "name": "pipenv",
+  "ecosystem": "Python",
+  "description": "Python development workflow tool",
+  "commands": {
+    "install": "pipenv install [package]",
+    "uninstall": "pipenv uninstall [package]",
+    "update": "pipenv update [package]",
+    "lock": "pipenv lock",
+    "check": "pipenv check",
+    "graph": "pipenv graph",
+    "run": "pipenv run [command]",
+    "shell": "pipenv shell",
+    "clean": "pipenv clean",
+    "help": "pipenv --help"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "deno",
+  "ecosystem": "JavaScript",
+  "description": "Modern JavaScript and TypeScript runtime",
+  "commands": {
+    "add": "deno add [package]",
+    "install": "deno install [package]",
+    "uninstall": "deno uninstall [package]",
+    "remove": "deno remove [package]",
+    "outdated": "deno outdated",
+    "init": "deno init",
+    "run": "deno run [file]",
+    "task": "deno task [name]",
+    "test": "deno test",
+    "bench": "deno bench",
+    "compile": "deno compile [file]",
+    "build": "deno compile [file]",
+    "fmt": "deno fmt",
+    "format": "deno fmt",
+    "lint": "deno lint",
+    "check": "deno check",
+    "doc": "deno doc",
+    "info": "deno info",
+    "publish": "deno publish",
+    "clean": "deno clean",
+    "self-update": "deno upgrade",
+    "help": "deno --help"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "dnf",
+  "ecosystem": "System (Fedora/RHEL)",
+  "description": "DNF package manager for RPM-based Linux distributions",
+  "commands": {
+    "install": "dnf install [package]",
+    "remove": "dnf remove [package]",
+    "upgrade": "dnf upgrade",
+    "update": "dnf update",
+    "search": "dnf search [query]",
+    "info": "dnf info [package]",
+    "list": "dnf list",
+    "list-installed": "dnf list --installed",
+    "check-upgrade": "dnf check-upgrade",
+    "autoremove": "dnf autoremove",
+    "clean": "dnf clean all",
+    "reinstall": "dnf reinstall [package]",
+    "downgrade": "dnf downgrade [package]",
+    "help": "dnf --help"
+  }
+}

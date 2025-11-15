@@ -1,0 +1,2 @@
+Error: unknown command "/bin/sh" for "helm"
+Run 'helm --help' for usage.

@@ -1,0 +1,26 @@
+{
+  "name": "bun",
+  "ecosystem": "JavaScript",
+  "description": "Fast JavaScript runtime, package manager, bundler, and test runner",
+  "commands": {
+    "install": "bun install",
+    "add": "bun add [package]",
+    "remove": "bun remove [package]",
+    "update": "bun update [package]",
+    "outdated": "bun outdated",
+    "info": "bun info [package]",
+    "why": "bun why [package]",
+    "link": "bun link [package]",
+    "unlink": "bun unlink",
+    "publish": "bun publish",
+    "audit": "bun audit",
+    "init": "bun init",
+    "create": "bun create [template]",
+    "run": "bun run [script]",
+    "exec": "bun x [command]",
+    "test": "bun test",
+    "build": "bun build [file]",
+    "self-update": "bun upgrade",
+    "help": "bun --help"
+  }
+}

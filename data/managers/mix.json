@@ -1,0 +1,18 @@
+{
+  "name": "mix",
+  "ecosystem": "Elixir",
+  "description": "Elixir build tool",
+  "commands": {
+    "new": "mix new [project]",
+    "deps.get": "mix deps.get",
+    "deps.update": "mix deps.update [dep]",
+    "deps.clean": "mix deps.clean [dep]",
+    "compile": "mix compile",
+    "run": "mix run",
+    "test": "mix test",
+    "format": "mix format",
+    "clean": "mix clean",
+    "release": "mix release",
+    "help": "mix help [task]"
+  }
+}

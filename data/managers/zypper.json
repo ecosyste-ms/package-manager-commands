@@ -1,0 +1,16 @@
+{
+  "name": "zypper",
+  "ecosystem": "System (openSUSE)",
+  "description": "Command-line package manager for openSUSE",
+  "commands": {
+    "install": "zypper install [package]",
+    "remove": "zypper remove [package]",
+    "update": "zypper update",
+    "upgrade": "zypper upgrade",
+    "search": "zypper search [query]",
+    "info": "zypper info [package]",
+    "list": "zypper list-updates",
+    "clean": "zypper clean",
+    "help": "zypper --help"
+  }
+}

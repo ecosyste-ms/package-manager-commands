@@ -1,0 +1,146 @@
+
+Usage:
+
+    zypper [--GLOBAL-OPTIONS] <COMMAND> [--COMMAND-OPTIONS] [ARGUMENTS]
+    zypper <SUBCOMMAND> [--COMMAND-OPTIONS] [ARGUMENTS]
+
+Global Options:
+
+    --help, -h              Help.
+    --version, -V           Output the version number.
+    --promptids             Output a list of zypper's user prompts.
+    --config, -c <FILE>     Use specified config file instead of the default.
+    --userdata <STRING>     User defined transaction id used in history and plugins.
+    --quiet, -q             Suppress normal output, print only error messages.
+    --verbose, -v           Increase verbosity.
+    --color
+    --no-color              Whether to use colors in output if tty supports it.
+    --no-abbrev, -A         Do not abbreviate text in tables. Default: false
+    --table-style, -s <INTEGER>
+                            Table style (0-11).
+    --non-interactive, -n   Do not ask anything, use default answers automatically. Default: false
+    --non-interactive-include-reboot-patches
+                            Do not treat patches as interactive, which have the rebootSuggested-flag
+                            set. Default: false
+    --xmlout, -x            Switch to XML output.
+    --ignore-unknown, -i    Ignore unknown packages. Default: false
+    --terse, -t             Terse output for machine consumption. Implies --no-abbrev and
+                            --no-color.
+
+
+    --reposd-dir, -D <DIR>  Use alternative repository definition file directory.
+    --cache-dir, -C <DIR>   Use alternative directory for all caches.
+    --raw-cache-dir <DIR>   Use alternative raw meta-data cache directory.
+    --solv-cache-dir <DIR>  Use alternative solv file cache directory.
+    --pkg-cache-dir <DIR>   Use alternative package cache directory.
+
+  Repository Options
+
+    --no-gpg-checks         Ignore GPG check failures and continue. Default: false
+    --gpg-auto-import-keys  Automatically trust and import new repository signing keys.
+    --plus-repo, -p <URI>   Use an additional repository.
+    --plus-content <TAG>    Additionally use disabled repositories providing a specific keyword. Try
+                            '--plus-content debug' to enable repos indicating to provide debug
+                            packages.
+    --disable-repositories  Do not read meta-data from repositories.
+    --no-refresh            Do not refresh the repositories.
+    --no-cd                 Ignore CD/DVD repositories.
+    --no-remote             Ignore remote repositories.
+    --releasever            Set the value of $releasever in all .repo files (default: distribution
+                            version)
+
+  Target Options
+
+    --root, -R <DIR>        Operate on a different root directory.
+    --installroot <DIR>     Operate on a different root directory, but share repositories with the
+                            host.
+    --disable-system-resolvables
+                            Do not read installed packages.
+
+Commands:
+
+      help, ?               Print zypper help
+      shell, sh             Accept multiple commands at once.
+
+  Repository Management:
+
+      repos, lr             List all defined repositories.
+      addrepo, ar           Add a new repository.
+      removerepo, rr        Remove specified repository.
+      renamerepo, nr        Rename specified repository.
+      modifyrepo, mr        Modify specified repository.
+      refresh, ref          Refresh all repositories.
+      clean, cc             Clean local caches.
+
+  Service Management:
+
+      services, ls          List all defined services.
+      addservice, as        Add a new service.
+      modifyservice, ms     Modify specified service.
+      removeservice, rs     Remove specified service.
+      refresh-services, refs
+                            Refresh all services.
+
+  Software Management:
+
+      install, in           Install packages.
+      remove, rm            Remove packages.
+      removeptf, rmptf      Remove (not only) PTFs.
+      verify, ve            Verify integrity of package dependencies.
+      source-install, si    Install source packages and their build dependencies.
+      install-new-recommends, inr
+                            Install newly added packages recommended by installed packages.
+
+  Update Management:
+
+      update, up            Update installed packages with newer versions.
+      list-updates, lu      List available updates.
+      patch                 Install needed patches.
+      list-patches, lp      List available patches.
+      dist-upgrade, dup     Perform a distribution upgrade.
+      patch-check, pchk     Check for patches.
+
+  Querying:
+
+      search, se            Search for packages matching a pattern.
+      info, if, show        Show full information for specified packages.
+      patch-info            Show full information for specified patches.
+      pattern-info          Show full information for specified patterns.
+      product-info          Show full information for specified products.
+      patches, pch          List all available patches.
+      packages, pa          List all available packages.
+      patterns, pt          List all available patterns.
+      products, pd          List all available products.
+      what-provides, wp     List packages providing specified capability.
+
+  Package Locks:
+
+      addlock, al           Add a package lock.
+      removelock, rl        Remove a package lock.
+      locks, ll             List current package locks.
+      cleanlocks, cl        Remove useless locks.
+
+  Locale Management:
+
+      locales, lloc         List requested locales (languages codes).
+      addlocale, aloc       Add locale(s) to requested locales.
+      removelocale, rloc    Remove locale(s) from requested locales.
+
+  Other Commands:
+
+      versioncmp, vcmp      Compare two version strings.
+      targetos, tos         Print the target operating system ID string.
+      licenses              Print report about licenses and EULAs of installed packages.
+      download              Download rpms specified on the commandline to a local directory.
+      source-download       Download source rpms for all installed packages to a local directory.
+      needs-rebooting       Check if the reboot-needed flag was set.
+      ps                    List running processes which might still use files and libraries deleted
+                            by recent upgrades.
+      purge-kernels         Remove old kernels.
+      system-architecture   Print the detected system architecture.
+
+  Subcommands:
+
+      subcommand            Lists available subcommands.
+
+Type 'zypper help <COMMAND>' to get command-specific help.

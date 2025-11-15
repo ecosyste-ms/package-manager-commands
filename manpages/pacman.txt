@@ -1,0 +1,5 @@
+Unable to find image 'archlinux:latest' locally
+latest: Pulling from library/archlinux
+docker: no matching manifest for linux/arm64/v8 in the manifest list entries
+
+Run 'docker run --help' for more information

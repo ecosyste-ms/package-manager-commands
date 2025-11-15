@@ -1,0 +1,48 @@
+Usage: cpanm [options] Module [...]
+
+Options:
+  -v,--verbose              Turns on chatty output
+  -q,--quiet                Turns off the most output
+  --interactive             Turns on interactive configure (required for Task:: modules)
+  -f,--force                force install
+  -n,--notest               Do not run unit tests
+  --test-only               Run tests only, do not install
+  -S,--sudo                 sudo to run install commands
+  --installdeps             Only install dependencies
+  --showdeps                Only display direct dependencies
+  --reinstall               Reinstall the distribution even if you already have the latest version installed
+  --mirror                  Specify the base URL for the mirror (e.g. http://cpan.cpantesters.org/)
+  --mirror-only             Use the mirror's index file instead of the CPAN Meta DB
+  -M,--from                 Use only this mirror base URL and its index file
+  --prompt                  Prompt when configure/build/test fails
+  -l,--local-lib            Specify the install base to install modules
+  -L,--local-lib-contained  Specify the install base to install all non-core modules
+  --self-contained          Install all non-core modules, even if they're already installed.
+  --auto-cleanup            Number of days that cpanm's work directories expire in. Defaults to 7
+
+Commands:
+  --self-upgrade            upgrades itself
+  --info                    Displays distribution info on CPAN
+  --look                    Opens the distribution with your SHELL
+  -U,--uninstall            Uninstalls the modules (EXPERIMENTAL)
+  -V,--version              Displays software version
+
+Examples:
+
+  cpanm Test::More                                          # install Test::More
+  cpanm MIYAGAWA/Plack-0.99_05.tar.gz                       # full distribution path
+  cpanm http://example.org/LDS/CGI.pm-3.20.tar.gz           # install from URL
+  cpanm ~/dists/MyCompany-Enterprise-1.00.tar.gz            # install from a local file
+  cpanm --interactive Task::Kensho                          # Configure interactively
+  cpanm .                                                   # install from local directory
+  cpanm --installdeps .                                     # install all the deps for the current directory
+  cpanm -L extlib Plack                                     # install Plack and all non-core deps into extlib
+  cpanm --mirror http://cpan.cpantesters.org/ DBI           # use the fast-syncing mirror
+  cpanm -M https://cpan.metacpan.org App::perlbrew          # use only this secure mirror and its index
+
+You can also specify the default options in PERL_CPANM_OPT environment variable in the shell rc:
+
+  export PERL_CPANM_OPT="--prompt --reinstall -l ~/perl --mirror http://cpan.cpantesters.org"
+
+Type `man cpanm` or `perldoc cpanm` for the more detailed explanation of the options.
+

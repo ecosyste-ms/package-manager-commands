@@ -1,0 +1,43 @@
+usage: mamba [-h] [-v] [--no-plugins] [-V] COMMAND ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+options:
+  -h, --help            Show this help message and exit.
+  -v, --verbose         Can be used multiple times. Once for detailed output,
+                        twice for INFO logging, thrice for DEBUG logging, four
+                        times for TRACE logging.
+  --no-plugins          Disable all plugins that are not built into conda.
+  -V, --version         Show the conda version number and exit.
+
+commands:
+  The following built-in and plugins subcommands are available.
+
+  COMMAND
+    activate            Activate a conda environment.
+    clean               Remove unused packages and caches.
+    commands            List all available conda subcommands (including those
+                        from plugins). Generally only used by tab-completion.
+    compare             Compare packages between conda environments.
+    config              Modify configuration values in .condarc.
+    create              Create a new conda environment from a list of
+                        specified packages.
+    deactivate          Deactivate the current active conda environment.
+    doctor              Display a health report for your environment.
+    export              Export a given environment
+    info                Display information about current conda install.
+    init                Initialize conda for shell interaction.
+    install             Install a list of packages into a specified conda
+                        environment.
+    list                List installed packages in a conda environment.
+    notices             Retrieve latest channel notifications.
+    package             Create low-level conda packages. (EXPERIMENTAL)
+    remove (uninstall)  Remove a list of packages from a specified conda
+                        environment.
+    rename              Rename an existing environment.
+    repoquery           Advanced search for repodata.
+    run                 Run an executable in a conda environment.
+    search              Search for packages and display associated information
+                        using the MatchSpec format.
+    update (upgrade)    Update conda packages to the latest compatible
+                        version.

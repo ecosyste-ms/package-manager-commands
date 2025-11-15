@@ -1,0 +1,17 @@
+{
+  "name": "stack",
+  "ecosystem": "Haskell",
+  "description": "Cross-platform build tool for Haskell",
+  "commands": {
+    "install": "stack install [package]",
+    "build": "stack build",
+    "test": "stack test",
+    "run": "stack run",
+    "clean": "stack clean",
+    "update": "stack update",
+    "init": "stack init",
+    "new": "stack new [project]",
+    "exec": "stack exec [command]",
+    "help": "stack --help"
+  }
+}

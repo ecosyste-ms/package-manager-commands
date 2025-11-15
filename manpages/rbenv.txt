@@ -1,0 +1,16 @@
+Usage: rbenv <command> [<args>...]
+
+Commands to manage available Ruby versions:
+   versions    List installed Ruby versions
+   install     Install a Ruby version using ruby-build
+   uninstall   Uninstall a specific Ruby version
+   rehash      Regenerate rbenv shims
+
+Commands to view or change the current Ruby version:
+   version     Show the current Ruby version and its origin
+   local       Set or show the local application-specific Ruby version
+   global      Set or show the global Ruby version
+   shell       Set or show the shell-specific Ruby version
+
+See `rbenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/rbenv/rbenv#readme

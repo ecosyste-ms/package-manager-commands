@@ -1,0 +1,28 @@
+{
+  "name": "uv",
+  "ecosystem": "Python",
+  "description": "An extremely fast Python package manager",
+  "commands": {
+    "add": "uv add [package]",
+    "remove": "uv remove [package]",
+    "sync": "uv sync",
+    "lock": "uv lock",
+    "install": "uv pip install [package]",
+    "uninstall": "uv pip uninstall [package]",
+    "list": "uv pip list",
+    "show": "uv pip show [package]",
+    "tree": "uv tree",
+    "init": "uv init",
+    "run": "uv run [command]",
+    "build": "uv build",
+    "publish": "uv publish",
+    "venv": "uv venv",
+    "python": "uv python",
+    "tool": "uv tool",
+    "cache": "uv cache",
+    "version": "uv version",
+    "format": "uv format",
+    "export": "uv export",
+    "help": "uv help [command]"
+  }
+}

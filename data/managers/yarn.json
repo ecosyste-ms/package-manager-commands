@@ -1,0 +1,31 @@
+{
+  "name": "yarn",
+  "ecosystem": "JavaScript",
+  "description": "Fast, reliable, and secure dependency management",
+  "commands": {
+    "install": "yarn add [package]",
+    "uninstall": "yarn remove [package]",
+    "update": "yarn upgrade [package]",
+    "search": "yarn info [package]",
+    "info": "yarn info [package]",
+    "list": "yarn list",
+    "outdated": "yarn outdated",
+    "init": "yarn init",
+    "run": "yarn run [script]",
+    "exec": "yarn exec [command]",
+    "test": "yarn test",
+    "publish": "yarn publish",
+    "login": "yarn login",
+    "logout": "yarn logout",
+    "owner": "yarn owner <subcommand>",
+    "link": "yarn link",
+    "unlink": "yarn unlink",
+    "config": "yarn config <subcommand>",
+    "cache": "yarn cache clean",
+    "audit": "yarn audit",
+    "version": "yarn version",
+    "why": "yarn why [package]",
+    "workspaces": "yarn workspaces",
+    "help": "yarn help [command]"
+  }
+}

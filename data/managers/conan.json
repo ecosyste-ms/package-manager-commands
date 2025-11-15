@@ -1,0 +1,19 @@
+{
+  "name": "conan",
+  "ecosystem": "C/C++",
+  "description": "C/C++ package manager",
+  "commands": {
+    "install": "conan install [package]",
+    "create": "conan create [path]",
+    "upload": "conan upload [package]",
+    "remove": "conan remove [package]",
+    "search": "conan search [query]",
+    "info": "conan info [package]",
+    "build": "conan build [path]",
+    "test": "conan test [path]",
+    "config": "conan config",
+    "profile": "conan profile",
+    "lock": "conan lock",
+    "help": "conan --help"
+  }
+}

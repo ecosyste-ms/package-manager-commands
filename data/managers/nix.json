@@ -1,0 +1,17 @@
+{
+  "name": "nix",
+  "ecosystem": "System (NixOS/Cross-platform)",
+  "description": "Reproducible and declarative package manager",
+  "commands": {
+    "search": "nix search [query]",
+    "install": "nix profile install [package]",
+    "remove": "nix profile remove [package]",
+    "list": "nix profile list",
+    "upgrade": "nix profile upgrade",
+    "build": "nix build",
+    "run": "nix run [package]",
+    "develop": "nix develop",
+    "format": "nix fmt",
+    "help": "nix --help"
+  }
+}

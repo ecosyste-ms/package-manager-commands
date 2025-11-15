@@ -1,0 +1,5 @@
+Terraform has no command named "/bin/sh".
+
+To see all of Terraform's top-level commands, run:
+  terraform -help
+

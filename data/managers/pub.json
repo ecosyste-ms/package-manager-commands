@@ -1,0 +1,20 @@
+{
+  "name": "pub",
+  "ecosystem": "Dart",
+  "description": "Dart package manager",
+  "commands": {
+    "get": "dart pub get",
+    "add": "dart pub add [package]",
+    "remove": "dart pub remove [package]",
+    "upgrade": "dart pub upgrade",
+    "downgrade": "dart pub downgrade",
+    "outdated": "dart pub outdated",
+    "deps": "dart pub deps",
+    "publish": "dart pub publish",
+    "login": "dart pub login",
+    "logout": "dart pub logout",
+    "cache": "dart pub cache",
+    "global": "dart pub global",
+    "help": "dart pub --help"
+  }
+}

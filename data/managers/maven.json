@@ -1,0 +1,15 @@
+{
+  "name": "maven",
+  "ecosystem": "Java",
+  "description": "Apache Maven project management tool",
+  "commands": {
+    "install": "mvn install",
+    "clean": "mvn clean",
+    "compile": "mvn compile",
+    "test": "mvn test",
+    "package": "mvn package",
+    "deploy": "mvn deploy",
+    "verify": "mvn verify",
+    "help": "mvn --help"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "podman",
+  "ecosystem": "Containers",
+  "description": "Daemonless container engine",
+  "commands": {
+    "pull": "podman pull [image]",
+    "push": "podman push [image]",
+    "build": "podman build [path]",
+    "run": "podman run [image]",
+    "exec": "podman exec [container] [command]",
+    "ps": "podman ps",
+    "images": "podman images",
+    "search": "podman search [query]",
+    "login": "podman login",
+    "logout": "podman logout",
+    "rm": "podman rm [container]",
+    "rmi": "podman rmi [image]",
+    "stop": "podman stop [container]",
+    "start": "podman start [container]",
+    "restart": "podman restart [container]",
+    "logs": "podman logs [container]",
+    "inspect": "podman inspect [object]",
+    "version": "podman version",
+    "info": "podman info",
+    "help": "podman --help"
+  }
+}

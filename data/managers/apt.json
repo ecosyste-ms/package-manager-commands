@@ -1,0 +1,21 @@
+{
+  "name": "apt",
+  "ecosystem": "System (Debian/Ubuntu)",
+  "description": "Advanced Package Tool for Debian-based systems",
+  "commands": {
+    "update": "apt update",
+    "upgrade": "apt upgrade",
+    "full-upgrade": "apt full-upgrade",
+    "install": "apt install [package]",
+    "remove": "apt remove [package]",
+    "purge": "apt purge [package]",
+    "autoremove": "apt autoremove",
+    "search": "apt search [query]",
+    "show": "apt show [package]",
+    "list": "apt list",
+    "list-installed": "apt list --installed",
+    "list-upgradeable": "apt list --upgradeable",
+    "edit-sources": "apt edit-sources",
+    "help": "apt help [command]"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "npm",
+  "ecosystem": "JavaScript",
+  "description": "Node Package Manager",
+  "commands": {
+    "install": "npm install [package]",
+    "uninstall": "npm uninstall [package]",
+    "update": "npm update [package]",
+    "search": "npm search [query]",
+    "info": "npm info [package]",
+    "list": "npm list",
+    "outdated": "npm outdated",
+    "init": "npm init",
+    "run": "npm run [script]",
+    "exec": "npx [command]",
+    "test": "npm test",
+    "publish": "npm publish",
+    "login": "npm login",
+    "logout": "npm logout",
+    "owner": "npm owner <subcommand>",
+    "link": "npm link [package]",
+    "unlink": "npm unlink [package]",
+    "config": "npm config <subcommand>",
+    "cache": "npm cache <subcommand>",
+    "audit": "npm audit",
+    "version": "npm version <level>",
+    "pack": "npm pack",
+    "help": "npm help [command]"
+  }
+}

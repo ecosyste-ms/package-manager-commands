@@ -1,0 +1,23 @@
+{
+  "name": "rustup",
+  "ecosystem": "Rust",
+  "description": "Rust toolchain installer",
+  "commands": {
+    "install": "rustup toolchain install [toolchain]",
+    "uninstall": "rustup toolchain uninstall [toolchain]",
+    "update": "rustup update",
+    "self-update": "rustup self update",
+    "default": "rustup default [toolchain]",
+    "list": "rustup toolchain list",
+    "show": "rustup show",
+    "check": "rustup check",
+    "component-add": "rustup component add [component]",
+    "component-remove": "rustup component remove [component]",
+    "component-list": "rustup component list",
+    "target-add": "rustup target add [target]",
+    "target-remove": "rustup target remove [target]",
+    "target-list": "rustup target list",
+    "doc": "rustup doc",
+    "help": "rustup help [command]"
+  }
+}

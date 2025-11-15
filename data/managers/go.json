@@ -1,0 +1,25 @@
+{
+  "name": "go",
+  "ecosystem": "Go",
+  "description": "Go module management",
+  "commands": {
+    "install": "go install [package]",
+    "get": "go get [package]",
+    "build": "go build",
+    "run": "go run [file]",
+    "test": "go test",
+    "clean": "go clean",
+    "list": "go list",
+    "mod-init": "go mod init [module]",
+    "mod-tidy": "go mod tidy",
+    "mod-download": "go mod download",
+    "mod-verify": "go mod verify",
+    "mod-graph": "go mod graph",
+    "mod-why": "go mod why [package]",
+    "doc": "go doc [package]",
+    "format": "go fmt",
+    "vet": "go vet",
+    "version": "go version",
+    "help": "go help [command]"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "dotnet",
+  "ecosystem": ".NET",
+  "description": ".NET SDK and runtime",
+  "commands": {
+    "new": "dotnet new [template]",
+    "restore": "dotnet restore",
+    "build": "dotnet build",
+    "run": "dotnet run",
+    "test": "dotnet test",
+    "publish": "dotnet publish",
+    "pack": "dotnet pack",
+    "clean": "dotnet clean",
+    "format": "dotnet format",
+    "add": "dotnet add package [package]",
+    "remove": "dotnet remove package [package]",
+    "list": "dotnet list package",
+    "tool": "dotnet tool",
+    "help": "dotnet --help"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "apk",
+  "ecosystem": "System (Alpine Linux)",
+  "description": "Alpine Linux package manager",
+  "commands": {
+    "add": "apk add [package]",
+    "del": "apk del [package]",
+    "update": "apk update",
+    "upgrade": "apk upgrade",
+    "search": "apk search [query]",
+    "info": "apk info [package]",
+    "list": "apk list",
+    "cache": "apk cache clean",
+    "fix": "apk fix",
+    "help": "apk --help"
+  }
+}

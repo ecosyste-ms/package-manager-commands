@@ -1,0 +1,27 @@
+{
+  "name": "docker",
+  "ecosystem": "Containers",
+  "description": "Container platform",
+  "commands": {
+    "pull": "docker pull [image]",
+    "push": "docker push [image]",
+    "build": "docker build [path]",
+    "run": "docker run [image]",
+    "exec": "docker exec [container] [command]",
+    "ps": "docker ps",
+    "images": "docker images",
+    "search": "docker search [query]",
+    "login": "docker login",
+    "logout": "docker logout",
+    "rm": "docker rm [container]",
+    "rmi": "docker rmi [image]",
+    "stop": "docker stop [container]",
+    "start": "docker start [container]",
+    "restart": "docker restart [container]",
+    "logs": "docker logs [container]",
+    "inspect": "docker inspect [object]",
+    "version": "docker version",
+    "info": "docker info",
+    "help": "docker help [command]"
+  }
+}

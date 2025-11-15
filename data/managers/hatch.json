@@ -1,0 +1,20 @@
+{
+  "name": "hatch",
+  "ecosystem": "Python",
+  "description": "Modern, extensible Python project manager",
+  "commands": {
+    "new": "hatch new [project]",
+    "init": "hatch init",
+    "build": "hatch build",
+    "publish": "hatch publish",
+    "run": "hatch run [command]",
+    "test": "hatch test",
+    "env": "hatch env",
+    "shell": "hatch shell",
+    "version": "hatch version",
+    "config": "hatch config",
+    "clean": "hatch clean",
+    "self-update": "hatch self update",
+    "help": "hatch --help"
+  }
+}

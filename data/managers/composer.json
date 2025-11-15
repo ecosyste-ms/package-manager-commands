@@ -1,0 +1,28 @@
+{
+  "name": "composer",
+  "ecosystem": "PHP",
+  "description": "Dependency Manager for PHP",
+  "commands": {
+    "init": "composer init",
+    "install": "composer install",
+    "update": "composer update [package]",
+    "require": "composer require [package]",
+    "remove": "composer remove [package]",
+    "search": "composer search [query]",
+    "show": "composer show [package]",
+    "outdated": "composer outdated",
+    "global": "composer global require [package]",
+    "run-script": "composer run-script [script]",
+    "exec": "composer exec [command]",
+    "validate": "composer validate",
+    "status": "composer status",
+    "config": "composer config [key] [value]",
+    "clear-cache": "composer clear-cache",
+    "audit": "composer audit",
+    "licenses": "composer licenses",
+    "depends": "composer depends [package]",
+    "self-update": "composer self-update",
+    "diagnose": "composer diagnose",
+    "help": "composer help [command]"
+  }
+}

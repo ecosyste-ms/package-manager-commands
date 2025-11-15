@@ -1,0 +1,26 @@
+NuGet Command Line 7.0.0.0
+
+Usage: dotnet nuget [options] [command]
+
+Options:
+  -h|--help  Show help information
+  --version  Show version information
+
+Commands:
+  add      Add a NuGet source.
+  config   NuGet configuration CLI
+  delete   Deletes a package from the server.
+  disable  Disable a NuGet source.
+  enable   Enable a NuGet source.
+  list     List configured NuGet sources.
+  locals   Clears or lists local NuGet resources such as http requests cache, packages folder, plugin operations cache  or machine-wide global packages folder.
+  push     Pushes a package to the server and publishes it.
+  remove   Remove a NuGet source.
+  sign     Signs NuGet package(s) at <package-paths> with the specified certificate.
+  trust    Manage the trusted signers.
+  update   Update a NuGet source.
+  verify   Verifies a signed NuGet package.
+  why      Shows the dependency graph for a particular package for a given project or solution.
+
+Use "dotnet nuget [command] --help" for more information about a command.
+

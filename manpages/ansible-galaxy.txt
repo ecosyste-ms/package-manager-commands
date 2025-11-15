@@ -1,0 +1,4 @@
+Unable to find image 'ansible/ansible:latest' locally
+docker: Error response from daemon: manifest for ansible/ansible:latest not found: manifest unknown: manifest unknown
+
+Run 'docker run --help' for more information
