@@ -2,6 +2,10 @@
 
 A cross-reference table of commands across different package managers, helping developers quickly find equivalent commands when switching between ecosystems.
 
+**View the comparison table:**
+- **[commands.csv](commands.csv)** - CSV for spreadsheets
+- **[commands.md](commands.md)** - Markdown table
+
 ## Overview
 
 This repository provides:
@@ -13,13 +17,13 @@ This repository provides:
 
 Currently includes **48 package managers**:
 
-- **JavaScript** (5)
+- **JavaScript**
   - npm
   - yarn
   - pnpm
   - bun
   - deno
-- **Python** (8)
+- **Python**
   - pip
   - uv
   - poetry
@@ -28,49 +32,49 @@ Currently includes **48 package managers**:
   - pdm
   - hatch
   - mamba
-- **Rust** (2)
+- **Rust**
   - cargo
   - rustup
-- **Ruby** (3)
+- **Ruby**
   - gem
   - bundler
   - rbenv
-- **PHP** (1)
+- **PHP**
   - composer
-- **Go** (1)
+- **Go**
   - go
-- **Java** (2)
+- **Java**
   - maven
   - gradle
-- **Clojure** (1)
+- **Clojure**
   - leiningen
-- **.NET** (2)
+- **.NET**
   - dotnet
   - nuget
-- **Haskell** (2)
+- **Haskell**
   - cabal
   - stack
-- **Elixir** (1)
+- **Elixir**
   - mix
-- **Erlang** (1)
+- **Erlang**
   - rebar3
-- **Dart** (1)
+- **Dart**
   - pub
-- **OCaml** (1)
+- **OCaml**
   - opam
-- **Perl** (2)
+- **Perl**
   - cpan
   - cpanm
-- **Lua** (1)
+- **Lua**
   - luarocks
-- **C/C++** (1)
+- **C/C++**
   - conan
-- **Containers** (2)
+- **Containers**
   - docker
   - podman
-- **Kubernetes** (1)
+- **Kubernetes**
   - helm
-- **System** (8)
+- **System**
   - brew
   - apt
   - dnf
@@ -79,15 +83,10 @@ Currently includes **48 package managers**:
   - apk
   - zypper
   - nix
-- **Infrastructure** (2)
+- **Infrastructure**
   - ansible-galaxy
   - terraform
 
-## Usage
-
-View the full comparison table:
-- **[COMMANDS.md](COMMANDS.md)** - Markdown table
-- **[commands.csv](commands.csv)** - CSV for spreadsheets
 
 ## Notes & Edge Cases
 
@@ -119,17 +118,6 @@ View the full comparison table:
 - **cargo**: `cargo install` is always global
 - **gem**: Global by default
 - **brew**: Global by default (system-wide)
-
-### Lock Files
-
-Different package managers use different lockfile formats:
-- **npm**: `package-lock.json`
-- **yarn**: `yarn.lock`
-- **pnpm**: `pnpm-lock.yaml`
-- **pip**: No automatic lockfile (use `pip freeze > requirements.txt`)
-- **cargo**: `Cargo.lock`
-- **bundler**: `Gemfile.lock`
-- **go**: `go.sum` and `go.mod`
 
 ### Gotchas & Common Confusion
 
@@ -187,38 +175,30 @@ These are included because they use similar command patterns.
 
 ## Contributing
 
-### Adding a New Package Manager
+To add a new package manager:
 
-1. Fetch via Docker: `ruby scripts/fetch-via-docker.rb <manager-name>`
-2. Create JSON file in `data/managers/<manager>.json`
-3. Regenerate tables: `ruby scripts/generate-table.rb > COMMANDS.md`
-4. Update README.md with the new count and ecosystem
-
-### Generating Tables
-
-Generate markdown table:
-```bash
-ruby scripts/generate-table.rb > COMMANDS.md
-```
-
-Generate CSV:
-```bash
-ruby scripts/generate-csv.rb > commands.csv
-```
+1. Add manpage: `<manager> --help > manpages/<manager>.txt`
+2. Create JSON file: `data/managers/<manager>.json`
+3. Regenerate tables:
+   ```bash
+   ruby scripts/generate-table.rb > commands.md
+   ruby scripts/generate-csv.rb > commands.csv
+   ```
+4. Update README.md with the new count
 
 ### Repository Structure
 
 ```
 package-manager-commands/
 ├── README.md                 # This file
-├── COMMANDS.md               # Full comparison table (generated)
+├── commands.md               # Full comparison table (generated)
 ├── commands.csv              # CSV export (generated)
 ├── data/
 │   ├── package-managers.json # All package managers in one file
 │   └── managers/             # Individual JSON files (48 total)
 ├── manpages/                 # Help output archives (50+ files)
 └── scripts/
-    ├── generate-table.rb     # Generate COMMANDS.md
+    ├── generate-table.rb     # Generate commands.md
     ├── generate-csv.rb       # Generate commands.csv
     └── fetch-via-docker.rb   # Fetch manpages via Docker
 ```
@@ -240,14 +220,8 @@ Individual package manager files:
 }
 ```
 
-### Remaining Package Managers
-
-- sbt, vcpkg, R, Julia, Zig, apt-get, emerge, nala, macports
-- Windows: chocolatey, scoop, winget
-- BSD: pkg, pkg_add
-- Cross-platform: guix, snap, flatpak, appimage
-
 ## License
 
-- **Data** (JSON files, manpages, generated tables): [CC0 1.0 Universal](LICENSE) (Public Domain)
+- **Data** (JSON files, generated tables): [CC0 1.0 Universal](LICENSE) (Public Domain)
 - **Code** (Ruby scripts): [MIT License](LICENSE-CODE)
+- **Manpages**: Subject to the licenses of their respective projects
