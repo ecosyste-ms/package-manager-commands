@@ -15,7 +15,7 @@ This repository provides:
 
 ## Supported Package Managers
 
-Currently includes **48 package managers**:
+Currently includes **61 package managers**:
 
 - **JavaScript**
   - npm
@@ -75,14 +75,27 @@ Currently includes **48 package managers**:
 - **Kubernetes**
   - helm
 - **System**
-  - brew
-  - apt
-  - dnf
-  - yum
-  - pacman
   - apk
-  - zypper
+  - apt
+  - brew
+  - cards
+  - dnf
+  - emerge
+  - eopkg
   - nix
+  - pacman
+  - pkg
+  - pkgcon
+  - pkgtools
+  - ports
+  - slackpkg
+  - slapt-get
+  - smart
+  - snap
+  - urpmi
+  - xbps
+  - yum
+  - zypper
 - **Infrastructure**
   - ansible-galaxy
   - terraform
@@ -181,6 +194,7 @@ To add a new package manager:
 2. Create JSON file: `data/managers/<manager>.json`
 3. Regenerate tables:
    ```bash
+   ruby scripts/combine-json.rb
    ruby scripts/generate-table.rb > commands.md
    ruby scripts/generate-csv.rb > commands.csv
    ```
@@ -195,9 +209,10 @@ package-manager-commands/
 ├── commands.csv              # CSV export (generated)
 ├── data/
 │   ├── package-managers.json # All package managers in one file
-│   └── managers/             # Individual JSON files (48 total)
+│   └── managers/             # Individual JSON files (61 total)
 ├── manpages/                 # Help output archives (50+ files)
 └── scripts/
+    ├── combine-json.rb       # Combine individual JSON files
     ├── generate-table.rb     # Generate commands.md
     ├── generate-csv.rb       # Generate commands.csv
     └── fetch-via-docker.rb   # Fetch manpages via Docker
