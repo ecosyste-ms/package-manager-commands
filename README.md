@@ -84,6 +84,7 @@ Currently includes **61 package managers**:
   - eopkg
   - nix
   - pacman
+  - pixi
   - pkg
   - pkgcon
   - pkgtools
