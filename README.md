@@ -28,10 +28,8 @@ Currently includes **61 package managers**:
   - uv
   - poetry
   - pipenv
-  - conda
   - pdm
   - hatch
-  - mamba
 - **Rust**
   - cargo
   - rustup
@@ -79,9 +77,11 @@ Currently includes **61 package managers**:
   - apt
   - brew
   - cards
+  - conda
   - dnf
   - emerge
   - eopkg
+  - mamba
   - nix
   - pacman
   - pkg
