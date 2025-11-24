@@ -1,0 +1,15 @@
+{
+  "name": "xbps",
+  "ecosystem": "System (Void Linux)",
+  "description": "X Binary Package System for Void Linux",
+  "commands": {
+    "install": "xbps-install [package]",
+    "remove": "xbps-remove [package]",
+    "update": "xbps-install -u [package]",
+    "search": "xbps-query -Rs [query]",
+    "info": "xbps-query -R [package]",
+    "list": "xbps-query -l",
+    "clean": "xbps-remove -O",
+    "help": "xbps-install --help"
+  }
+}

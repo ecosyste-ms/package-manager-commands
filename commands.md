@@ -11,6 +11,7 @@ Auto-generated from `data/package-managers.json`
 - **JavaScript**: bun, deno, npm, pnpm, yarn
 - **Ruby**: bundler, gem, rbenv
 - **Haskell**: cabal, stack
+- **System (NuTyX)**: cards
 - **Rust**: cargo, rustup
 - **PHP**: composer
 - **C/C++**: conan
@@ -19,6 +20,8 @@ Auto-generated from `data/package-managers.json`
 - **System (Fedora/RHEL)**: dnf
 - **Containers**: docker, podman
 - **.NET**: dotnet, nuget
+- **System (Gentoo)**: emerge
+- **System (Solus)**: eopkg
 - **Go**: go
 - **Java**: gradle, maven
 - **Kubernetes**: helm
@@ -28,49 +31,55 @@ Auto-generated from `data/package-managers.json`
 - **System (NixOS/Cross-platform)**: nix
 - **OCaml**: opam
 - **System (Arch Linux)**: pacman
+- **System (FreeBSD)**: pkg, ports
+- **System (Cross-platform)**: pkgcon, smart
+- **System (Slackware)**: pkgtools, slackpkg, slapt-get
 - **Dart**: pub
 - **Erlang**: rebar3
+- **System (Universal Linux)**: snap
+- **System (Mandriva/Mageia)**: urpmi
+- **System (Void Linux)**: xbps
 - **System (RHEL/CentOS)**: yum
 - **System (openSUSE)**: zypper
 
 ## Command Comparison Table
 
-| Operation | ansible-galaxy | apk | apt | brew | bun | bundler | cabal | cargo | composer | conan | conda | cpan | cpanm | deno | dnf | docker | dotnet | gem | go | gradle | hatch | helm | leiningen | luarocks | mamba | maven | mix | nix | npm | nuget | opam | pacman | pdm | pip | pipenv | pnpm | podman | poetry | pub | rbenv | rebar3 | rustup | stack | terraform | uv | yarn | yum | zypper |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Install package** | `ansible-galaxy install [role]` | N/A | `apt install [package]` | `brew install [formula]` | `bun install` | `bundle install` | `cabal install [package]` | `cargo install [package]` | `composer install` | `conan install [package]` | `conda install [package]` | `cpan [module]` | `cpanm [module]` | `deno install [package]` | `dnf install [package]` | N/A | N/A | `gem install [package]` | `go install [package]` | N/A | N/A | `helm install [name] [chart]` | `lein install` | `luarocks install [rock]` | `mamba install [package]` | `mvn install` | N/A | `nix profile install [package]` | `npm install [package]` | N/A | `opam install [package]` | `pacman -S [package]` | `pdm install` | `pip install [package]` | `pipenv install [package]` | `pnpm add [package]` | N/A | `poetry install` | N/A | `rbenv install [version]` | N/A | `rustup toolchain install [toolchain]` | `stack install [package]` | N/A | `uv pip install [package]` | `yarn add [package]` | `yum install [package]` | `zypper install [package]` |
-| **Uninstall** | N/A | N/A | N/A | `brew uninstall [formula]` | N/A | N/A | N/A | `cargo uninstall [package]` | N/A | N/A | N/A | N/A | `cpanm -U [module]` | `deno uninstall [package]` | N/A | N/A | N/A | `gem uninstall [package]` | N/A | N/A | N/A | `helm uninstall [name]` | N/A | N/A | N/A | N/A | N/A | N/A | `npm uninstall [package]` | N/A | N/A | N/A | N/A | `pip uninstall [package]` | `pipenv uninstall [package]` | `pnpm remove [package]` | N/A | N/A | N/A | `rbenv uninstall [version]` | N/A | `rustup toolchain uninstall [toolchain]` | N/A | N/A | `uv pip uninstall [package]` | `yarn remove [package]` | N/A | N/A |
-| **Update packages** | N/A | `apk update` | `apt update` | `brew update` | `bun update [package]` | `bundle update [gem]` | `cabal update` | `cargo update [package]` | `composer update [package]` | N/A | `conda update [package]` | `cpan -r` | N/A | N/A | `dnf update` | N/A | N/A | `gem update [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `mamba update [package]` | N/A | N/A | N/A | `npm update [package]` | N/A | `opam update` | `pacman -Sy` | `pdm update [package]` | N/A | `pipenv update [package]` | `pnpm update [package]` | N/A | `poetry update [package]` | N/A | N/A | `rebar3 update` | `rustup update` | `stack update` | N/A | N/A | `yarn upgrade [package]` | `yum update [package]` | `zypper update` |
-| **Search** | `ansible-galaxy search [query]` | `apk search [query]` | `apt search [query]` | `brew search [query]` | N/A | N/A | N/A | `cargo search [query]` | `composer search [query]` | `conan search [query]` | `conda search [query]` | `cpan -a [query]` | N/A | N/A | `dnf search [query]` | `docker search [query]` | N/A | `gem search [query]` | N/A | N/A | N/A | `helm search [query]` | N/A | `luarocks search [query]` | `mamba search [query]` | N/A | N/A | `nix search [query]` | `npm search [query]` | N/A | `opam search [query]` | `pacman -Ss [query]` | `pdm search [query]` | `pip search [query]` | N/A | `pnpm search [query]` | `podman search [query]` | `poetry search [query]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn info [package]` | `yum search [query]` | `zypper search [query]` |
-| **Show info** | `ansible-galaxy info [role]` | `apk info [package]` | N/A | `brew info [formula]` | `bun info [package]` | `bundle show [gem]` | `cabal info [package]` | `cargo info [package]` | N/A | `conan info [package]` | `conda info` | `cpan -D [module]` | `cpanm --info [module]` | `deno info` | `dnf info [package]` | `docker info` | N/A | `gem info [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `mamba info` | N/A | N/A | N/A | `npm info [package]` | N/A | `opam info [package]` | `pacman -Si [package]` | `pdm info` | `pip show [package]` | N/A | `pnpm view [package]` | `podman info` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn info [package]` | `yum info [package]` | `zypper info [package]` |
-| **List installed** | `ansible-galaxy list` | `apk list` | `apt list` | `brew list` | N/A | `bundle list` | `cabal list [package]` | N/A | N/A | N/A | `conda list` | N/A | N/A | N/A | `dnf list` | N/A | `dotnet list package` | `gem list` | `go list` | N/A | N/A | `helm list` | N/A | `luarocks list` | `mamba list` | N/A | N/A | `nix profile list` | `npm list` | `dotnet nuget list source` | `opam list` | `pacman -Q` | `pdm list` | `pip list` | N/A | `pnpm list` | N/A | N/A | N/A | N/A | N/A | `rustup toolchain list` | N/A | N/A | `uv pip list` | `yarn list` | `yum list` | `zypper list-updates` |
-| **List global packages** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Show outdated** | N/A | N/A | N/A | `brew outdated` | `bun outdated` | `bundle outdated` | `cabal outdated` | N/A | `composer outdated` | N/A | N/A | N/A | N/A | `deno outdated` | N/A | N/A | N/A | `gem outdated` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm outdated` | N/A | N/A | N/A | `pdm outdated` | `pip list --outdated` | N/A | `pnpm outdated` | N/A | N/A | `dart pub outdated` | N/A | N/A | N/A | N/A | N/A | N/A | `yarn outdated` | N/A | N/A |
-| **Initialize project** | `ansible-galaxy init [role]` | N/A | N/A | N/A | `bun init` | `bundle init` | `cabal init` | `cargo init` | `composer init` | N/A | N/A | N/A | N/A | `deno init` | N/A | N/A | N/A | N/A | N/A | `gradle init` | `hatch init` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm init` | N/A | `opam init` | N/A | `pdm init` | N/A | N/A | `pnpm init` | N/A | `poetry init` | N/A | N/A | N/A | N/A | `stack init` | `terraform init` | `uv init` | `yarn init` | N/A | N/A |
-| **Add dependency to manifest** | N/A | `apk add [package]` | N/A | N/A | `bun add [package]` | `bundle add [gem]` | N/A | `cargo add [package]` | N/A | N/A | N/A | N/A | N/A | `deno add [package]` | N/A | N/A | `dotnet add package [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet nuget add source [url]` | N/A | N/A | `pdm add [package]` | N/A | N/A | N/A | N/A | `poetry add [package]` | `dart pub add [package]` | N/A | N/A | N/A | N/A | N/A | `uv add [package]` | N/A | N/A | N/A |
-| **Remove dependency from manifest** | `ansible-galaxy remove [role]` | N/A | `apt remove [package]` | N/A | `bun remove [package]` | `bundle remove [gem]` | N/A | `cargo remove [package]` | `composer remove [package]` | `conan remove [package]` | `conda remove [package]` | `cpan -U [module]` | N/A | `deno remove [package]` | `dnf remove [package]` | N/A | `dotnet remove package [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `luarocks remove [rock]` | `mamba remove [package]` | N/A | N/A | `nix profile remove [package]` | N/A | `dotnet nuget remove source [name]` | `opam remove [package]` | `pacman -R [package]` | `pdm remove [package]` | N/A | N/A | N/A | N/A | `poetry remove [package]` | `dart pub remove [package]` | N/A | N/A | N/A | N/A | N/A | `uv remove [package]` | N/A | `yum remove [package]` | `zypper remove [package]` |
-| **Run script/command** | N/A | N/A | N/A | N/A | `bun run [script]` | N/A | `cabal run` | `cargo run` | N/A | N/A | N/A | N/A | N/A | `deno run [file]` | N/A | `docker run [image]` | `dotnet run` | N/A | `go run [file]` | `gradle run` | `hatch run [command]` | N/A | `lein run` | N/A | N/A | N/A | `mix run` | `nix run [package]` | `npm run [script]` | N/A | N/A | N/A | `pdm run [script]` | N/A | `pipenv run [command]` | `pnpm run [script]` | `podman run [image]` | `poetry run [command]` | N/A | N/A | N/A | N/A | `stack run` | N/A | `uv run [command]` | `yarn run [script]` | N/A | N/A |
-| **Execute in context** | N/A | N/A | N/A | N/A | `bun x [command]` | `bundle exec [command]` | N/A | N/A | `composer exec [command]` | N/A | N/A | N/A | N/A | N/A | N/A | `docker exec [container] [command]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npx [command]` | N/A | `opam exec [command]` | N/A | N/A | N/A | N/A | `pnpm exec [command]` | `podman exec [container] [command]` | N/A | N/A | N/A | N/A | N/A | `stack exec [command]` | N/A | N/A | `yarn exec [command]` | N/A | N/A |
-| **Run tests** | N/A | N/A | N/A | N/A | `bun test` | N/A | `cabal test` | `cargo test` | N/A | `conan test [path]` | N/A | N/A | N/A | `deno test` | N/A | N/A | `dotnet test` | N/A | `go test` | `gradle test` | `hatch test` | N/A | `lein test` | N/A | N/A | `mvn test` | `mix test` | N/A | `npm test` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm test` | N/A | N/A | N/A | N/A | `rebar3 test` | N/A | `stack test` | N/A | N/A | `yarn test` | N/A | N/A |
-| **Build project** | N/A | N/A | N/A | N/A | `bun build [file]` | N/A | `cabal build` | `cargo build` | N/A | `conan build [path]` | N/A | N/A | N/A | `deno compile [file]` | N/A | `docker build [path]` | `dotnet build` | `gem build [gemspec]` | `go build` | `gradle build` | `hatch build` | N/A | N/A | `luarocks build` | N/A | N/A | N/A | `nix build` | N/A | N/A | N/A | N/A | `pdm build` | N/A | N/A | N/A | `podman build [path]` | `poetry build` | N/A | N/A | N/A | N/A | `stack build` | N/A | `uv build` | N/A | N/A | N/A |
-| **Check/verify** | N/A | N/A | N/A | N/A | N/A | `bundle check` | `cabal check` | `cargo check` | N/A | N/A | N/A | N/A | N/A | `deno check` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pip check` | `pipenv check` | N/A | N/A | `poetry check` | N/A | N/A | N/A | `rustup check` | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Publish** | N/A | N/A | N/A | N/A | `bun publish` | N/A | N/A | `cargo publish` | N/A | N/A | N/A | N/A | N/A | `deno publish` | N/A | N/A | `dotnet publish` | N/A | N/A | N/A | `hatch publish` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm publish` | N/A | N/A | N/A | `pdm publish` | N/A | N/A | `pnpm publish` | N/A | `poetry publish` | `dart pub publish` | N/A | N/A | N/A | N/A | N/A | `uv publish` | `yarn publish` | N/A | N/A |
-| **Package for distribution** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet pack` | N/A | N/A | N/A | N/A | N/A | N/A | `luarocks pack [rock]` | N/A | N/A | N/A | N/A | `npm pack` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Login/authenticate** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `docker login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm login` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm login` | `podman login` | N/A | `dart pub login` | N/A | N/A | N/A | N/A | N/A | N/A | `yarn login` | N/A | N/A |
-| **Logout** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `docker logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm logout` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm logout` | `podman logout` | N/A | `dart pub logout` | N/A | N/A | N/A | N/A | N/A | N/A | `yarn logout` | N/A | N/A |
-| **Link (dev)** | N/A | N/A | N/A | `brew link [formula]` | `bun link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn link` | N/A | N/A |
-| **Unlink** | N/A | N/A | N/A | `brew unlink [formula]` | `bun unlink` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm unlink [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm unlink [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn unlink` | N/A | N/A |
-| **Clean/cache** | N/A | `apk cache clean` | N/A | N/A | N/A | `bundle cache` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm cache <subcommand>` | N/A | N/A | N/A | `pdm cache clear` | `pip cache <subcommand>` | N/A | N/A | N/A | `poetry cache clear` | `dart pub cache` | N/A | N/A | N/A | N/A | N/A | `uv cache` | `yarn cache clean` | N/A | N/A |
-| **Clean build artifacts** | N/A | N/A | N/A | N/A | N/A | `bundle clean` | `cabal clean` | `cargo clean` | N/A | N/A | `conda clean --all` | N/A | N/A | `deno clean` | `dnf clean all` | N/A | `dotnet clean` | N/A | `go clean` | `gradle clean` | `hatch clean` | N/A | `lein clean` | N/A | `mamba clean --all` | `mvn clean` | `mix clean` | N/A | N/A | N/A | `opam clean` | `pacman -Sc` | N/A | N/A | `pipenv clean` | N/A | N/A | N/A | N/A | N/A | `rebar3 clean` | N/A | `stack clean` | N/A | N/A | N/A | `yum clean all` | `zypper clean` |
-| **Audit security** | N/A | N/A | N/A | N/A | `bun audit` | N/A | N/A | N/A | `composer audit` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm audit` | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm audit` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn audit` | N/A | N/A |
-| **Why/dependency tree** | N/A | N/A | N/A | N/A | `bun why [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet nuget why [package]` | N/A | N/A | N/A | N/A | N/A | `pnpm why [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn why [package]` | N/A | N/A |
-| **Dependency tree** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo tree` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `rebar3 tree` | N/A | N/A | N/A | `uv tree` | N/A | N/A | N/A |
-| **Lock dependencies** | N/A | N/A | N/A | N/A | N/A | `bundle lock` | N/A | N/A | N/A | `conan lock` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `gem lock [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pdm lock` | N/A | `pipenv lock` | N/A | N/A | `poetry lock` | N/A | N/A | N/A | N/A | N/A | N/A | `uv lock` | N/A | N/A | N/A |
-| **Format code** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo fmt` | N/A | N/A | N/A | N/A | N/A | `deno fmt` | N/A | N/A | `dotnet format` | N/A | `go fmt` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `mix format` | `nix fmt` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `terraform fmt` | `uv format` | N/A | N/A | N/A |
-| **Show licenses** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `composer licenses` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm licenses` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Update package manager itself** | N/A | N/A | N/A | N/A | `bun upgrade` | N/A | N/A | N/A | `composer self-update` | N/A | N/A | N/A | `cpanm --self-upgrade` | `deno upgrade` | N/A | N/A | N/A | `gem update --system` | N/A | N/A | `hatch self update` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `poetry self update` | N/A | N/A | N/A | `rustup self update` | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Config** | N/A | N/A | N/A | `brew config` | N/A | `bundle config` | N/A | `cargo config` | `composer config [key] [value]` | `conan config` | `conda config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `hatch config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm config <subcommand>` | N/A | `opam config` | N/A | `pdm config` | `pip config <subcommand>` | N/A | `pnpm config <subcommand>` | N/A | `poetry config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn config <subcommand>` | N/A | N/A |
-| **Diagnose issues** | N/A | N/A | N/A | `brew doctor` | N/A | `bundle doctor` | N/A | N/A | N/A | N/A | `conda doctor` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| **Help** | `ansible-galaxy --help` | `apk --help` | `apt help [command]` | `brew help [command]` | `bun --help` | `bundle help [command]` | `cabal --help` | `cargo help [command]` | `composer help [command]` | `conan --help` | `conda --help` | `cpan -h` | `cpanm --help` | `deno --help` | `dnf --help` | `docker help [command]` | `dotnet --help` | `gem help [command]` | `go help [command]` | `gradle --help` | `hatch --help` | `helm --help` | `lein help` | `luarocks --help` | `mamba --help` | `mvn --help` | `mix help [task]` | `nix --help` | `npm help [command]` | `dotnet nuget --help` | `opam --help` | `pacman --help` | `pdm --help` | `pip help [command]` | `pipenv --help` | `pnpm help [command]` | `podman --help` | `poetry help [command]` | `dart pub --help` | `rbenv help [command]` | `rebar3 help` | `rustup help [command]` | `stack --help` | `terraform --help` | `uv help [command]` | `yarn help [command]` | `yum --help` | `zypper --help` |
+| Operation | ansible-galaxy | apk | apt | brew | bun | bundler | cabal | cards | cargo | composer | conan | conda | cpan | cpanm | deno | dnf | docker | dotnet | emerge | eopkg | gem | go | gradle | hatch | helm | leiningen | luarocks | mamba | maven | mix | nix | npm | nuget | opam | pacman | pdm | pip | pipenv | pkg | pkgcon | pkgtools | pnpm | podman | poetry | ports | pub | rbenv | rebar3 | rustup | slackpkg | slapt-get | smart | snap | stack | terraform | urpmi | uv | xbps | yarn | yum | zypper |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Install package** | `ansible-galaxy install [role]` | N/A | `apt install [package]` | `brew install [formula]` | `bun install` | `bundle install` | `cabal install [package]` | `cards install [package]` | `cargo install [package]` | `composer install` | `conan install [package]` | `conda install [package]` | `cpan [module]` | `cpanm [module]` | `deno install [package]` | `dnf install [package]` | N/A | N/A | `emerge [package]` | `eopkg install [package]` | `gem install [package]` | `go install [package]` | N/A | N/A | `helm install [name] [chart]` | `lein install` | `luarocks install [rock]` | `mamba install [package]` | `mvn install` | N/A | `nix profile install [package]` | `npm install [package]` | N/A | `opam install [package]` | `pacman -S [package]` | `pdm install` | `pip install [package]` | `pipenv install [package]` | `pkg install [package]` | `pkcon install [package]` | `installpkg [package]` | `pnpm add [package]` | N/A | `poetry install` | `cd /usr/ports/category/port && make install clean` | N/A | `rbenv install [version]` | N/A | `rustup toolchain install [toolchain]` | `slackpkg install [package]` | `slapt-get --install [package]` | `smart install [package]` | `snap install [package]` | `stack install [package]` | N/A | `urpmi [package]` | `uv pip install [package]` | `xbps-install [package]` | `yarn add [package]` | `yum install [package]` | `zypper install [package]` |
+| **Uninstall** | N/A | N/A | N/A | `brew uninstall [formula]` | N/A | N/A | N/A | N/A | `cargo uninstall [package]` | N/A | N/A | N/A | N/A | `cpanm -U [module]` | `deno uninstall [package]` | N/A | N/A | N/A | `emerge -aC [package]` | N/A | `gem uninstall [package]` | N/A | N/A | N/A | `helm uninstall [name]` | N/A | N/A | N/A | N/A | N/A | N/A | `npm uninstall [package]` | N/A | N/A | N/A | N/A | `pip uninstall [package]` | `pipenv uninstall [package]` | N/A | N/A | N/A | `pnpm remove [package]` | N/A | N/A | N/A | N/A | `rbenv uninstall [version]` | N/A | `rustup toolchain uninstall [toolchain]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv pip uninstall [package]` | N/A | `yarn remove [package]` | N/A | N/A |
+| **Update packages** | N/A | `apk update` | `apt update` | `brew update` | `bun update [package]` | `bundle update [gem]` | `cabal update` | `cards sync` | `cargo update [package]` | `composer update [package]` | N/A | `conda update [package]` | `cpan -r` | N/A | N/A | `dnf update` | N/A | N/A | `emerge --sync` | `eopkg upgrade [package]` | `gem update [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `mamba update [package]` | N/A | N/A | N/A | `npm update [package]` | N/A | `opam update` | `pacman -Sy` | `pdm update [package]` | N/A | `pipenv update [package]` | `pkg update` | `pkcon refresh` | N/A | `pnpm update [package]` | N/A | `poetry update [package]` | `portsnap fetch update` | N/A | N/A | `rebar3 update` | `rustup update` | `slackpkg update` | `slapt-get --update` | `smart update` | `snap refresh [package]` | `stack update` | N/A | `urpmi.update -a` | N/A | `xbps-install -u [package]` | `yarn upgrade [package]` | `yum update [package]` | `zypper update` |
+| **Search** | `ansible-galaxy search [query]` | `apk search [query]` | `apt search [query]` | `brew search [query]` | N/A | N/A | N/A | `cards search [query]` | `cargo search [query]` | `composer search [query]` | `conan search [query]` | `conda search [query]` | `cpan -a [query]` | N/A | N/A | `dnf search [query]` | `docker search [query]` | N/A | `emerge --search [query]` | `eopkg search [query]` | `gem search [query]` | N/A | N/A | N/A | `helm search [query]` | N/A | `luarocks search [query]` | `mamba search [query]` | N/A | N/A | `nix search [query]` | `npm search [query]` | N/A | `opam search [query]` | `pacman -Ss [query]` | `pdm search [query]` | `pip search [query]` | N/A | `pkg search [query]` | `pkcon search name [query]` | N/A | `pnpm search [query]` | `podman search [query]` | `poetry search [query]` | `cd /usr/ports && make search name=[query]` | N/A | N/A | N/A | N/A | `slackpkg search [query]` | `slapt-get --search [query]` | `smart search [query]` | `snap find [query]` | N/A | N/A | `urpmq [query]` | N/A | `xbps-query -Rs [query]` | `yarn info [package]` | `yum search [query]` | `zypper search [query]` |
+| **Show info** | `ansible-galaxy info [role]` | `apk info [package]` | N/A | `brew info [formula]` | `bun info [package]` | `bundle show [gem]` | `cabal info [package]` | `cards info [package]` | `cargo info [package]` | N/A | `conan info [package]` | `conda info` | `cpan -D [module]` | `cpanm --info [module]` | `deno info` | `dnf info [package]` | `docker info` | N/A | `emerge --info [package]` | `eopkg info [package]` | `gem info [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `mamba info` | N/A | N/A | N/A | `npm info [package]` | N/A | `opam info [package]` | `pacman -Si [package]` | `pdm info` | `pip show [package]` | N/A | `pkg info [package]` | `pkcon get-details [package]` | `cat /var/log/packages/[package]` | `pnpm view [package]` | `podman info` | N/A | `cd /usr/ports/category/port && make showconfig` | N/A | N/A | N/A | N/A | `slackpkg info [package]` | `slapt-get --show [package]` | `smart info [package]` | `snap info [package]` | N/A | N/A | `urpmq -i [package]` | N/A | `xbps-query -R [package]` | `yarn info [package]` | `yum info [package]` | `zypper info [package]` |
+| **List installed** | `ansible-galaxy list` | `apk list` | `apt list` | `brew list` | N/A | `bundle list` | `cabal list [package]` | `cards list` | N/A | N/A | N/A | `conda list` | N/A | N/A | N/A | `dnf list` | N/A | `dotnet list package` | `qlist -Iv` | `eopkg list-installed` | `gem list` | `go list` | N/A | N/A | `helm list` | N/A | `luarocks list` | `mamba list` | N/A | N/A | `nix profile list` | `npm list` | `dotnet nuget list source` | `opam list` | `pacman -Q` | `pdm list` | `pip list` | N/A | `pkg info` | `pkcon get-packages` | `ls /var/log/packages/` | `pnpm list` | N/A | N/A | `pkg_info` | N/A | N/A | N/A | `rustup toolchain list` | `ls /var/log/packages/` | `slapt-get --installed` | `smart query --installed` | `snap list` | N/A | N/A | `rpm -qa` | `uv pip list` | `xbps-query -l` | `yarn list` | `yum list` | `zypper list-updates` |
+| **List global packages** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Show outdated** | N/A | N/A | N/A | `brew outdated` | `bun outdated` | `bundle outdated` | `cabal outdated` | N/A | N/A | `composer outdated` | N/A | N/A | N/A | N/A | `deno outdated` | N/A | N/A | N/A | N/A | N/A | `gem outdated` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm outdated` | N/A | N/A | N/A | `pdm outdated` | `pip list --outdated` | N/A | N/A | N/A | N/A | `pnpm outdated` | N/A | N/A | N/A | `dart pub outdated` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn outdated` | N/A | N/A |
+| **Initialize project** | `ansible-galaxy init [role]` | N/A | N/A | N/A | `bun init` | `bundle init` | `cabal init` | N/A | `cargo init` | `composer init` | N/A | N/A | N/A | N/A | `deno init` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `gradle init` | `hatch init` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm init` | N/A | `opam init` | N/A | `pdm init` | N/A | N/A | N/A | N/A | N/A | `pnpm init` | N/A | `poetry init` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `stack init` | `terraform init` | N/A | `uv init` | N/A | `yarn init` | N/A | N/A |
+| **Add dependency to manifest** | N/A | `apk add [package]` | N/A | N/A | `bun add [package]` | `bundle add [gem]` | N/A | N/A | `cargo add [package]` | N/A | N/A | N/A | N/A | N/A | `deno add [package]` | N/A | N/A | `dotnet add package [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet nuget add source [url]` | N/A | N/A | `pdm add [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `poetry add [package]` | N/A | `dart pub add [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv add [package]` | N/A | N/A | N/A | N/A |
+| **Remove dependency from manifest** | `ansible-galaxy remove [role]` | N/A | `apt remove [package]` | N/A | `bun remove [package]` | `bundle remove [gem]` | N/A | `cards remove [package]` | `cargo remove [package]` | `composer remove [package]` | `conan remove [package]` | `conda remove [package]` | `cpan -U [module]` | N/A | `deno remove [package]` | `dnf remove [package]` | N/A | `dotnet remove package [package]` | N/A | `eopkg remove [package]` | N/A | N/A | N/A | N/A | N/A | N/A | `luarocks remove [rock]` | `mamba remove [package]` | N/A | N/A | `nix profile remove [package]` | N/A | `dotnet nuget remove source [name]` | `opam remove [package]` | `pacman -R [package]` | `pdm remove [package]` | N/A | N/A | `pkg remove [package]` | `pkcon remove [package]` | `removepkg [package]` | N/A | N/A | `poetry remove [package]` | `pkg_delete [package]` | `dart pub remove [package]` | N/A | N/A | N/A | `slackpkg remove [package]` | `slapt-get --remove [package]` | `smart remove [package]` | `snap remove [package]` | N/A | N/A | `urpme [package]` | `uv remove [package]` | `xbps-remove [package]` | N/A | `yum remove [package]` | `zypper remove [package]` |
+| **Run script/command** | N/A | N/A | N/A | N/A | `bun run [script]` | N/A | `cabal run` | N/A | `cargo run` | N/A | N/A | N/A | N/A | N/A | `deno run [file]` | N/A | `docker run [image]` | `dotnet run` | N/A | N/A | N/A | `go run [file]` | `gradle run` | `hatch run [command]` | N/A | `lein run` | N/A | N/A | N/A | `mix run` | `nix run [package]` | `npm run [script]` | N/A | N/A | N/A | `pdm run [script]` | N/A | `pipenv run [command]` | N/A | N/A | N/A | `pnpm run [script]` | `podman run [image]` | `poetry run [command]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `stack run` | N/A | N/A | `uv run [command]` | N/A | `yarn run [script]` | N/A | N/A |
+| **Execute in context** | N/A | N/A | N/A | N/A | `bun x [command]` | `bundle exec [command]` | N/A | N/A | N/A | `composer exec [command]` | N/A | N/A | N/A | N/A | N/A | N/A | `docker exec [container] [command]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npx [command]` | N/A | `opam exec [command]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm exec [command]` | `podman exec [container] [command]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `stack exec [command]` | N/A | N/A | N/A | N/A | `yarn exec [command]` | N/A | N/A |
+| **Run tests** | N/A | N/A | N/A | N/A | `bun test` | N/A | `cabal test` | N/A | `cargo test` | N/A | `conan test [path]` | N/A | N/A | N/A | `deno test` | N/A | N/A | `dotnet test` | N/A | N/A | N/A | `go test` | `gradle test` | `hatch test` | N/A | `lein test` | N/A | N/A | `mvn test` | `mix test` | N/A | `npm test` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm test` | N/A | N/A | N/A | N/A | N/A | `rebar3 test` | N/A | N/A | N/A | N/A | N/A | `stack test` | N/A | N/A | N/A | N/A | `yarn test` | N/A | N/A |
+| **Build project** | N/A | N/A | N/A | N/A | `bun build [file]` | N/A | `cabal build` | N/A | `cargo build` | N/A | `conan build [path]` | N/A | N/A | N/A | `deno compile [file]` | N/A | `docker build [path]` | `dotnet build` | N/A | N/A | `gem build [gemspec]` | `go build` | `gradle build` | `hatch build` | N/A | N/A | `luarocks build` | N/A | N/A | N/A | `nix build` | N/A | N/A | N/A | N/A | `pdm build` | N/A | N/A | N/A | N/A | N/A | N/A | `podman build [path]` | `poetry build` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `stack build` | N/A | N/A | `uv build` | N/A | N/A | N/A | N/A |
+| **Check/verify** | N/A | N/A | N/A | N/A | N/A | `bundle check` | `cabal check` | N/A | `cargo check` | N/A | N/A | N/A | N/A | N/A | `deno check` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pip check` | `pipenv check` | N/A | N/A | N/A | N/A | N/A | `poetry check` | N/A | N/A | N/A | N/A | `rustup check` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Publish** | N/A | N/A | N/A | N/A | `bun publish` | N/A | N/A | N/A | `cargo publish` | N/A | N/A | N/A | N/A | N/A | `deno publish` | N/A | N/A | `dotnet publish` | N/A | N/A | N/A | N/A | N/A | `hatch publish` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm publish` | N/A | N/A | N/A | `pdm publish` | N/A | N/A | N/A | N/A | N/A | `pnpm publish` | N/A | `poetry publish` | N/A | `dart pub publish` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv publish` | N/A | `yarn publish` | N/A | N/A |
+| **Package for distribution** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet pack` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `luarocks pack [rock]` | N/A | N/A | N/A | N/A | `npm pack` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Login/authenticate** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `docker login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm login` | `podman login` | N/A | N/A | `dart pub login` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn login` | N/A | N/A |
+| **Logout** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `docker logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm logout` | `podman logout` | N/A | N/A | `dart pub logout` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn logout` | N/A | N/A |
+| **Link (dev)** | N/A | N/A | N/A | `brew link [formula]` | `bun link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm link [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn link` | N/A | N/A |
+| **Unlink** | N/A | N/A | N/A | `brew unlink [formula]` | `bun unlink` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm unlink [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm unlink [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn unlink` | N/A | N/A |
+| **Clean/cache** | N/A | `apk cache clean` | N/A | N/A | N/A | `bundle cache` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm cache <subcommand>` | N/A | N/A | N/A | `pdm cache clear` | `pip cache <subcommand>` | N/A | N/A | N/A | N/A | N/A | N/A | `poetry cache clear` | N/A | `dart pub cache` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv cache` | N/A | `yarn cache clean` | N/A | N/A |
+| **Clean build artifacts** | N/A | N/A | N/A | N/A | N/A | `bundle clean` | `cabal clean` | N/A | `cargo clean` | N/A | N/A | `conda clean --all` | N/A | N/A | `deno clean` | `dnf clean all` | N/A | `dotnet clean` | `emerge --depclean` | `eopkg delete-cache` | N/A | `go clean` | `gradle clean` | `hatch clean` | N/A | `lein clean` | N/A | `mamba clean --all` | `mvn clean` | `mix clean` | N/A | N/A | N/A | `opam clean` | `pacman -Sc` | N/A | N/A | `pipenv clean` | `pkg clean` | N/A | N/A | N/A | N/A | N/A | `cd /usr/ports/category/port && make clean` | N/A | N/A | `rebar3 clean` | N/A | `slackpkg clean-system` | `slapt-get --clean` | `smart clean` | N/A | `stack clean` | N/A | `urpmi --clean` | N/A | `xbps-remove -O` | N/A | `yum clean all` | `zypper clean` |
+| **Audit security** | N/A | N/A | N/A | N/A | `bun audit` | N/A | N/A | N/A | N/A | `composer audit` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm audit` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm audit` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn audit` | N/A | N/A |
+| **Why/dependency tree** | N/A | N/A | N/A | N/A | `bun why [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `dotnet nuget why [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm why [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn why [package]` | N/A | N/A |
+| **Dependency tree** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo tree` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `rebar3 tree` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv tree` | N/A | N/A | N/A | N/A |
+| **Lock dependencies** | N/A | N/A | N/A | N/A | N/A | `bundle lock` | N/A | N/A | N/A | N/A | `conan lock` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `gem lock [package]` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pdm lock` | N/A | `pipenv lock` | N/A | N/A | N/A | N/A | N/A | `poetry lock` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `uv lock` | N/A | N/A | N/A | N/A |
+| **Format code** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `cargo fmt` | N/A | N/A | N/A | N/A | N/A | `deno fmt` | N/A | N/A | `dotnet format` | N/A | N/A | N/A | `go fmt` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `mix format` | `nix fmt` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `terraform fmt` | N/A | `uv format` | N/A | N/A | N/A | N/A |
+| **Show licenses** | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `composer licenses` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `pnpm licenses` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Update package manager itself** | N/A | N/A | N/A | N/A | `bun upgrade` | N/A | N/A | N/A | N/A | `composer self-update` | N/A | N/A | N/A | `cpanm --self-upgrade` | `deno upgrade` | N/A | N/A | N/A | N/A | N/A | `gem update --system` | N/A | N/A | `hatch self update` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `poetry self update` | N/A | N/A | N/A | N/A | `rustup self update` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Config** | N/A | N/A | N/A | `brew config` | N/A | `bundle config` | N/A | N/A | `cargo config` | `composer config [key] [value]` | `conan config` | `conda config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `hatch config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `npm config <subcommand>` | N/A | `opam config` | N/A | `pdm config` | `pip config <subcommand>` | N/A | N/A | N/A | N/A | `pnpm config <subcommand>` | N/A | `poetry config` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | `yarn config <subcommand>` | N/A | N/A |
+| **Diagnose issues** | N/A | N/A | N/A | `brew doctor` | N/A | `bundle doctor` | N/A | N/A | N/A | N/A | N/A | `conda doctor` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| **Help** | `ansible-galaxy --help` | `apk --help` | `apt help [command]` | `brew help [command]` | `bun --help` | `bundle help [command]` | `cabal --help` | `cards --help` | `cargo help [command]` | `composer help [command]` | `conan --help` | `conda --help` | `cpan -h` | `cpanm --help` | `deno --help` | `dnf --help` | `docker help [command]` | `dotnet --help` | `emerge --help` | `eopkg --help` | `gem help [command]` | `go help [command]` | `gradle --help` | `hatch --help` | `helm --help` | `lein help` | `luarocks --help` | `mamba --help` | `mvn --help` | `mix help [task]` | `nix --help` | `npm help [command]` | `dotnet nuget --help` | `opam --help` | `pacman --help` | `pdm --help` | `pip help [command]` | `pipenv --help` | `pkg help` | `pkcon --help` | `installpkg --help` | `pnpm help [command]` | `podman --help` | `poetry help [command]` | `man ports` | `dart pub --help` | `rbenv help [command]` | `rebar3 help` | `rustup help [command]` | `slackpkg help` | `slapt-get --help` | `smart --help` | `snap --help` | `stack --help` | `terraform --help` | `urpmi --help` | `uv help [command]` | `xbps-install --help` | `yarn help [command]` | `yum --help` | `zypper --help` |
 
 ## Detailed Command Lists
 
@@ -234,6 +243,23 @@ Auto-generated from `data/package-managers.json`
 - `cabal upload` - upload
 - `cabal check` - check
 - `cabal --help` - help
+
+### cards
+
+**Ecosystem**: System (NuTyX)
+
+**Description**: Package manager for NuTyX Linux
+
+**Commands**:
+
+- `cards install [package]` - install
+- `cards remove [package]` - remove
+- `cards sync` - update
+- `cards upgrade` - upgrade
+- `cards search [query]` - search
+- `cards info [package]` - info
+- `cards list` - list
+- `cards --help` - help
 
 ### cargo
 
@@ -480,6 +506,40 @@ Auto-generated from `data/package-managers.json`
 - `dotnet list package` - list
 - `dotnet tool` - tool
 - `dotnet --help` - help
+
+### emerge
+
+**Ecosystem**: System (Gentoo)
+
+**Description**: Portage package manager for Gentoo Linux
+
+**Commands**:
+
+- `emerge [package]` - install
+- `emerge -aC [package]` - uninstall
+- `emerge --sync` - update
+- `emerge --search [query]` - search
+- `emerge --info [package]` - info
+- `qlist -Iv` - list
+- `emerge --depclean` - clean
+- `emerge --help` - help
+
+### eopkg
+
+**Ecosystem**: System (Solus)
+
+**Description**: Package manager for Solus Linux
+
+**Commands**:
+
+- `eopkg install [package]` - install
+- `eopkg remove [package]` - remove
+- `eopkg upgrade [package]` - update
+- `eopkg search [query]` - search
+- `eopkg info [package]` - info
+- `eopkg list-installed` - list
+- `eopkg delete-cache` - clean
+- `eopkg --help` - help
 
 ### gem
 
@@ -870,6 +930,56 @@ Auto-generated from `data/package-managers.json`
 - `pipenv clean` - clean
 - `pipenv --help` - help
 
+### pkg
+
+**Ecosystem**: System (FreeBSD)
+
+**Description**: FreeBSD binary package manager
+
+**Commands**:
+
+- `pkg install [package]` - install
+- `pkg remove [package]` - remove
+- `pkg update` - update
+- `pkg upgrade` - upgrade
+- `pkg search [query]` - search
+- `pkg info [package]` - info
+- `pkg info` - list
+- `pkg clean` - clean
+- `pkg help` - help
+
+### pkgcon
+
+**Ecosystem**: System (Cross-platform)
+
+**Description**: PackageKit command-line client for cross-distro package management
+
+**Commands**:
+
+- `pkcon install [package]` - install
+- `pkcon remove [package]` - remove
+- `pkcon refresh` - update
+- `pkcon update [package]` - upgrade
+- `pkcon search name [query]` - search
+- `pkcon get-details [package]` - info
+- `pkcon get-packages` - list
+- `pkcon --help` - help
+
+### pkgtools
+
+**Ecosystem**: System (Slackware)
+
+**Description**: Traditional Slackware package management tools
+
+**Commands**:
+
+- `installpkg [package]` - install
+- `upgradepkg [package]` - upgrade
+- `removepkg [package]` - remove
+- `ls /var/log/packages/` - list
+- `cat /var/log/packages/[package]` - info
+- `installpkg --help` - help
+
 ### pnpm
 
 **Ecosystem**: JavaScript
@@ -955,6 +1065,24 @@ Auto-generated from `data/package-managers.json`
 - `poetry self update` - self-update
 - `poetry version` - version
 - `poetry help [command]` - help
+
+### ports
+
+**Ecosystem**: System (FreeBSD)
+
+**Description**: FreeBSD Ports Collection - source-based package system
+
+**Commands**:
+
+- `cd /usr/ports/category/port && make install clean` - install
+- `pkg_delete [package]` - remove
+- `portsnap fetch update` - update
+- `portupgrade -a` - upgrade
+- `cd /usr/ports && make search name=[query]` - search
+- `cd /usr/ports/category/port && make showconfig` - info
+- `pkg_info` - list
+- `cd /usr/ports/category/port && make clean` - clean
+- `man ports` - help
 
 ### pub
 
@@ -1045,6 +1173,76 @@ Auto-generated from `data/package-managers.json`
 - `rustup doc` - doc
 - `rustup help [command]` - help
 
+### slackpkg
+
+**Ecosystem**: System (Slackware)
+
+**Description**: Package manager for Slackware Linux
+
+**Commands**:
+
+- `slackpkg install [package]` - install
+- `slackpkg remove [package]` - remove
+- `slackpkg update` - update
+- `slackpkg upgrade-all` - upgrade
+- `slackpkg search [query]` - search
+- `slackpkg info [package]` - info
+- `ls /var/log/packages/` - list
+- `slackpkg clean-system` - clean
+- `slackpkg help` - help
+
+### slapt-get
+
+**Ecosystem**: System (Slackware)
+
+**Description**: APT-like package manager for Slackware Linux
+
+**Commands**:
+
+- `slapt-get --install [package]` - install
+- `slapt-get --remove [package]` - remove
+- `slapt-get --update` - update
+- `slapt-get --upgrade` - upgrade
+- `slapt-get --search [query]` - search
+- `slapt-get --show [package]` - info
+- `slapt-get --installed` - list
+- `slapt-get --clean` - clean
+- `slapt-get --help` - help
+
+### smart
+
+**Ecosystem**: System (Cross-platform)
+
+**Description**: Cross-platform package manager from Conectiva
+
+**Commands**:
+
+- `smart install [package]` - install
+- `smart remove [package]` - remove
+- `smart update` - update
+- `smart upgrade` - upgrade
+- `smart search [query]` - search
+- `smart info [package]` - info
+- `smart query --installed` - list
+- `smart clean` - clean
+- `smart --help` - help
+
+### snap
+
+**Ecosystem**: System (Universal Linux)
+
+**Description**: Universal Linux package manager from Canonical
+
+**Commands**:
+
+- `snap install [package]` - install
+- `snap remove [package]` - remove
+- `snap refresh [package]` - update
+- `snap find [query]` - search
+- `snap info [package]` - info
+- `snap list` - list
+- `snap --help` - help
+
 ### stack
 
 **Ecosystem**: Haskell
@@ -1082,6 +1280,23 @@ Auto-generated from `data/package-managers.json`
 - `terraform providers` - providers
 - `terraform --help` - help
 
+### urpmi
+
+**Ecosystem**: System (Mandriva/Mageia)
+
+**Description**: Package manager for Mandriva and Mageia Linux
+
+**Commands**:
+
+- `urpmi [package]` - install
+- `urpme [package]` - remove
+- `urpmi.update -a` - update
+- `urpmq [query]` - search
+- `urpmq -i [package]` - info
+- `rpm -qa` - list
+- `urpmi --clean` - clean
+- `urpmi --help` - help
+
 ### uv
 
 **Ecosystem**: Python
@@ -1111,6 +1326,23 @@ Auto-generated from `data/package-managers.json`
 - `uv format` - format
 - `uv export` - export
 - `uv help [command]` - help
+
+### xbps
+
+**Ecosystem**: System (Void Linux)
+
+**Description**: X Binary Package System for Void Linux
+
+**Commands**:
+
+- `xbps-install [package]` - install
+- `xbps-remove [package]` - remove
+- `xbps-install -u [package]` - update
+- `xbps-query -Rs [query]` - search
+- `xbps-query -R [package]` - info
+- `xbps-query -l` - list
+- `xbps-remove -O` - clean
+- `xbps-install --help` - help
 
 ### yarn
 

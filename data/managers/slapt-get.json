@@ -1,0 +1,16 @@
+{
+  "name": "slapt-get",
+  "ecosystem": "System (Slackware)",
+  "description": "APT-like package manager for Slackware Linux",
+  "commands": {
+    "install": "slapt-get --install [package]",
+    "remove": "slapt-get --remove [package]",
+    "update": "slapt-get --update",
+    "upgrade": "slapt-get --upgrade",
+    "search": "slapt-get --search [query]",
+    "info": "slapt-get --show [package]",
+    "list": "slapt-get --installed",
+    "clean": "slapt-get --clean",
+    "help": "slapt-get --help"
+  }
+}

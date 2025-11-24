@@ -1,0 +1,13 @@
+{
+  "name": "pkgtools",
+  "ecosystem": "System (Slackware)",
+  "description": "Traditional Slackware package management tools",
+  "commands": {
+    "install": "installpkg [package]",
+    "upgrade": "upgradepkg [package]",
+    "remove": "removepkg [package]",
+    "list": "ls /var/log/packages/",
+    "info": "cat /var/log/packages/[package]",
+    "help": "installpkg --help"
+  }
+}

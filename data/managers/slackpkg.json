@@ -1,0 +1,16 @@
+{
+  "name": "slackpkg",
+  "ecosystem": "System (Slackware)",
+  "description": "Package manager for Slackware Linux",
+  "commands": {
+    "install": "slackpkg install [package]",
+    "remove": "slackpkg remove [package]",
+    "update": "slackpkg update",
+    "upgrade": "slackpkg upgrade-all",
+    "search": "slackpkg search [query]",
+    "info": "slackpkg info [package]",
+    "list": "ls /var/log/packages/",
+    "clean": "slackpkg clean-system",
+    "help": "slackpkg help"
+  }
+}

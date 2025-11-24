@@ -1,0 +1,15 @@
+{
+  "name": "emerge",
+  "ecosystem": "System (Gentoo)",
+  "description": "Portage package manager for Gentoo Linux",
+  "commands": {
+    "install": "emerge [package]",
+    "uninstall": "emerge -aC [package]",
+    "update": "emerge --sync",
+    "search": "emerge --search [query]",
+    "info": "emerge --info [package]",
+    "list": "qlist -Iv",
+    "clean": "emerge --depclean",
+    "help": "emerge --help"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "snap",
+  "ecosystem": "System (Universal Linux)",
+  "description": "Universal Linux package manager from Canonical",
+  "commands": {
+    "install": "snap install [package]",
+    "remove": "snap remove [package]",
+    "update": "snap refresh [package]",
+    "search": "snap find [query]",
+    "info": "snap info [package]",
+    "list": "snap list",
+    "help": "snap --help"
+  }
+}
