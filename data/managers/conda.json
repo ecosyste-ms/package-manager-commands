@@ -1,6 +1,6 @@
 {
   "name": "conda",
-  "ecosystem": "Python",
+  "ecosystem": "System (Cross-platform)",
   "description": "Package, dependency and environment management",
   "commands": {
     "install": "conda install [package]",

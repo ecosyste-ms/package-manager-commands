@@ -15,7 +15,7 @@ Auto-generated from `data/package-managers.json`
 - **Rust**: cargo, rustup
 - **PHP**: composer
 - **C/C++**: conan
-- **Python**: conda, hatch, mamba, pdm, pip, pipenv, poetry, uv
+- **System (Cross-platform)**: conda, mamba, pkgcon, smart
 - **Perl**: cpan, cpanm
 - **System (Fedora/RHEL)**: dnf
 - **Containers**: docker, podman
@@ -24,6 +24,7 @@ Auto-generated from `data/package-managers.json`
 - **System (Solus)**: eopkg
 - **Go**: go
 - **Java**: gradle, maven
+- **Python**: hatch, pdm, pip, pipenv, poetry, uv
 - **Kubernetes**: helm
 - **Clojure**: leiningen
 - **Lua**: luarocks
@@ -32,7 +33,6 @@ Auto-generated from `data/package-managers.json`
 - **OCaml**: opam
 - **System (Arch Linux)**: pacman
 - **System (FreeBSD)**: pkg, ports
-- **System (Cross-platform)**: pkgcon, smart
 - **System (Slackware)**: pkgtools, slackpkg, slapt-get
 - **Dart**: pub
 - **Erlang**: rebar3
@@ -351,7 +351,7 @@ Auto-generated from `data/package-managers.json`
 
 ### conda
 
-**Ecosystem**: Python
+**Ecosystem**: System (Cross-platform)
 
 **Description**: Package, dependency and environment management
 
@@ -694,7 +694,7 @@ Auto-generated from `data/package-managers.json`
 
 ### mamba
 
-**Ecosystem**: Python
+**Ecosystem**: System (Cross-platform)
 
 **Description**: Fast drop-in replacement for conda
 

@@ -1,6 +1,6 @@
 {
   "name": "mamba",
-  "ecosystem": "Python",
+  "ecosystem": "System (Cross-platform)",
   "description": "Fast drop-in replacement for conda",
   "commands": {
     "install": "mamba install [package]",
