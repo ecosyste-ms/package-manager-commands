@@ -1,0 +1,15 @@
+{
+  "name": "cards",
+  "ecosystem": "System (NuTyX)",
+  "description": "Package manager for NuTyX Linux",
+  "commands": {
+    "install": "cards install [package]",
+    "remove": "cards remove [package]",
+    "update": "cards sync",
+    "upgrade": "cards upgrade",
+    "search": "cards search [query]",
+    "info": "cards info [package]",
+    "list": "cards list",
+    "help": "cards --help"
+  }
+}

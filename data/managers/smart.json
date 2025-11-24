@@ -1,0 +1,16 @@
+{
+  "name": "smart",
+  "ecosystem": "System (Cross-platform)",
+  "description": "Cross-platform package manager from Conectiva",
+  "commands": {
+    "install": "smart install [package]",
+    "remove": "smart remove [package]",
+    "update": "smart update",
+    "upgrade": "smart upgrade",
+    "search": "smart search [query]",
+    "info": "smart info [package]",
+    "list": "smart query --installed",
+    "clean": "smart clean",
+    "help": "smart --help"
+  }
+}

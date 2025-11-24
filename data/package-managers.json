@@ -147,6 +147,21 @@
         "help": "cabal --help"
       }
     },
+    "cards": {
+      "name": "cards",
+      "ecosystem": "System (NuTyX)",
+      "description": "Package manager for NuTyX Linux",
+      "commands": {
+        "install": "cards install [package]",
+        "remove": "cards remove [package]",
+        "update": "cards sync",
+        "upgrade": "cards upgrade",
+        "search": "cards search [query]",
+        "info": "cards info [package]",
+        "list": "cards list",
+        "help": "cards --help"
+      }
+    },
     "cargo": {
       "name": "cargo",
       "ecosystem": "Rust",
@@ -371,6 +386,36 @@
         "list": "dotnet list package",
         "tool": "dotnet tool",
         "help": "dotnet --help"
+      }
+    },
+    "emerge": {
+      "name": "emerge",
+      "ecosystem": "System (Gentoo)",
+      "description": "Portage package manager for Gentoo Linux",
+      "commands": {
+        "install": "emerge [package]",
+        "uninstall": "emerge -aC [package]",
+        "update": "emerge --sync",
+        "search": "emerge --search [query]",
+        "info": "emerge --info [package]",
+        "list": "qlist -Iv",
+        "clean": "emerge --depclean",
+        "help": "emerge --help"
+      }
+    },
+    "eopkg": {
+      "name": "eopkg",
+      "ecosystem": "System (Solus)",
+      "description": "Package manager for Solus Linux",
+      "commands": {
+        "install": "eopkg install [package]",
+        "remove": "eopkg remove [package]",
+        "update": "eopkg upgrade [package]",
+        "search": "eopkg search [query]",
+        "info": "eopkg info [package]",
+        "list": "eopkg list-installed",
+        "clean": "eopkg delete-cache",
+        "help": "eopkg --help"
       }
     },
     "gem": {
@@ -726,6 +771,50 @@
         "help": "pipenv --help"
       }
     },
+    "pkg": {
+      "name": "pkg",
+      "ecosystem": "System (FreeBSD)",
+      "description": "FreeBSD binary package manager",
+      "commands": {
+        "install": "pkg install [package]",
+        "remove": "pkg remove [package]",
+        "update": "pkg update",
+        "upgrade": "pkg upgrade",
+        "search": "pkg search [query]",
+        "info": "pkg info [package]",
+        "list": "pkg info",
+        "clean": "pkg clean",
+        "help": "pkg help"
+      }
+    },
+    "pkgcon": {
+      "name": "pkgcon",
+      "ecosystem": "System (Cross-platform)",
+      "description": "PackageKit command-line client for cross-distro package management",
+      "commands": {
+        "install": "pkcon install [package]",
+        "remove": "pkcon remove [package]",
+        "update": "pkcon refresh",
+        "upgrade": "pkcon update [package]",
+        "search": "pkcon search name [query]",
+        "info": "pkcon get-details [package]",
+        "list": "pkcon get-packages",
+        "help": "pkcon --help"
+      }
+    },
+    "pkgtools": {
+      "name": "pkgtools",
+      "ecosystem": "System (Slackware)",
+      "description": "Traditional Slackware package management tools",
+      "commands": {
+        "install": "installpkg [package]",
+        "upgrade": "upgradepkg [package]",
+        "remove": "removepkg [package]",
+        "list": "ls /var/log/packages/",
+        "info": "cat /var/log/packages/[package]",
+        "help": "installpkg --help"
+      }
+    },
     "pnpm": {
       "name": "pnpm",
       "ecosystem": "JavaScript",
@@ -804,6 +893,22 @@
         "self-update": "poetry self update",
         "version": "poetry version",
         "help": "poetry help [command]"
+      }
+    },
+    "ports": {
+      "name": "ports",
+      "ecosystem": "System (FreeBSD)",
+      "description": "FreeBSD Ports Collection - source-based package system",
+      "commands": {
+        "install": "cd /usr/ports/category/port && make install clean",
+        "remove": "pkg_delete [package]",
+        "update": "portsnap fetch update",
+        "upgrade": "portupgrade -a",
+        "search": "cd /usr/ports && make search name=[query]",
+        "info": "cd /usr/ports/category/port && make showconfig",
+        "list": "pkg_info",
+        "clean": "cd /usr/ports/category/port && make clean",
+        "help": "man ports"
       }
     },
     "pub": {
@@ -887,6 +992,68 @@
         "help": "rustup help [command]"
       }
     },
+    "slackpkg": {
+      "name": "slackpkg",
+      "ecosystem": "System (Slackware)",
+      "description": "Package manager for Slackware Linux",
+      "commands": {
+        "install": "slackpkg install [package]",
+        "remove": "slackpkg remove [package]",
+        "update": "slackpkg update",
+        "upgrade": "slackpkg upgrade-all",
+        "search": "slackpkg search [query]",
+        "info": "slackpkg info [package]",
+        "list": "ls /var/log/packages/",
+        "clean": "slackpkg clean-system",
+        "help": "slackpkg help"
+      }
+    },
+    "slapt-get": {
+      "name": "slapt-get",
+      "ecosystem": "System (Slackware)",
+      "description": "APT-like package manager for Slackware Linux",
+      "commands": {
+        "install": "slapt-get --install [package]",
+        "remove": "slapt-get --remove [package]",
+        "update": "slapt-get --update",
+        "upgrade": "slapt-get --upgrade",
+        "search": "slapt-get --search [query]",
+        "info": "slapt-get --show [package]",
+        "list": "slapt-get --installed",
+        "clean": "slapt-get --clean",
+        "help": "slapt-get --help"
+      }
+    },
+    "smart": {
+      "name": "smart",
+      "ecosystem": "System (Cross-platform)",
+      "description": "Cross-platform package manager from Conectiva",
+      "commands": {
+        "install": "smart install [package]",
+        "remove": "smart remove [package]",
+        "update": "smart update",
+        "upgrade": "smart upgrade",
+        "search": "smart search [query]",
+        "info": "smart info [package]",
+        "list": "smart query --installed",
+        "clean": "smart clean",
+        "help": "smart --help"
+      }
+    },
+    "snap": {
+      "name": "snap",
+      "ecosystem": "System (Universal Linux)",
+      "description": "Universal Linux package manager from Canonical",
+      "commands": {
+        "install": "snap install [package]",
+        "remove": "snap remove [package]",
+        "update": "snap refresh [package]",
+        "search": "snap find [query]",
+        "info": "snap info [package]",
+        "list": "snap list",
+        "help": "snap --help"
+      }
+    },
     "stack": {
       "name": "stack",
       "ecosystem": "Haskell",
@@ -920,6 +1087,21 @@
         "help": "terraform --help"
       }
     },
+    "urpmi": {
+      "name": "urpmi",
+      "ecosystem": "System (Mandriva/Mageia)",
+      "description": "Package manager for Mandriva and Mageia Linux",
+      "commands": {
+        "install": "urpmi [package]",
+        "remove": "urpme [package]",
+        "update": "urpmi.update -a",
+        "search": "urpmq [query]",
+        "info": "urpmq -i [package]",
+        "list": "rpm -qa",
+        "clean": "urpmi --clean",
+        "help": "urpmi --help"
+      }
+    },
     "uv": {
       "name": "uv",
       "ecosystem": "Python",
@@ -946,6 +1128,21 @@
         "format": "uv format",
         "export": "uv export",
         "help": "uv help [command]"
+      }
+    },
+    "xbps": {
+      "name": "xbps",
+      "ecosystem": "System (Void Linux)",
+      "description": "X Binary Package System for Void Linux",
+      "commands": {
+        "install": "xbps-install [package]",
+        "remove": "xbps-remove [package]",
+        "update": "xbps-install -u [package]",
+        "search": "xbps-query -Rs [query]",
+        "info": "xbps-query -R [package]",
+        "list": "xbps-query -l",
+        "clean": "xbps-remove -O",
+        "help": "xbps-install --help"
       }
     },
     "yarn": {

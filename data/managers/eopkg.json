@@ -1,0 +1,15 @@
+{
+  "name": "eopkg",
+  "ecosystem": "System (Solus)",
+  "description": "Package manager for Solus Linux",
+  "commands": {
+    "install": "eopkg install [package]",
+    "remove": "eopkg remove [package]",
+    "update": "eopkg upgrade [package]",
+    "search": "eopkg search [query]",
+    "info": "eopkg info [package]",
+    "list": "eopkg list-installed",
+    "clean": "eopkg delete-cache",
+    "help": "eopkg --help"
+  }
+}

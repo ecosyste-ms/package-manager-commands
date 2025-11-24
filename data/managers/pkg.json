@@ -1,0 +1,16 @@
+{
+  "name": "pkg",
+  "ecosystem": "System (FreeBSD)",
+  "description": "FreeBSD binary package manager",
+  "commands": {
+    "install": "pkg install [package]",
+    "remove": "pkg remove [package]",
+    "update": "pkg update",
+    "upgrade": "pkg upgrade",
+    "search": "pkg search [query]",
+    "info": "pkg info [package]",
+    "list": "pkg info",
+    "clean": "pkg clean",
+    "help": "pkg help"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "urpmi",
+  "ecosystem": "System (Mandriva/Mageia)",
+  "description": "Package manager for Mandriva and Mageia Linux",
+  "commands": {
+    "install": "urpmi [package]",
+    "remove": "urpme [package]",
+    "update": "urpmi.update -a",
+    "search": "urpmq [query]",
+    "info": "urpmq -i [package]",
+    "list": "rpm -qa",
+    "clean": "urpmi --clean",
+    "help": "urpmi --help"
+  }
+}

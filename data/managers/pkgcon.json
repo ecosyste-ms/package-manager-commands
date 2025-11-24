@@ -1,0 +1,15 @@
+{
+  "name": "pkgcon",
+  "ecosystem": "System (Cross-platform)",
+  "description": "PackageKit command-line client for cross-distro package management",
+  "commands": {
+    "install": "pkcon install [package]",
+    "remove": "pkcon remove [package]",
+    "update": "pkcon refresh",
+    "upgrade": "pkcon update [package]",
+    "search": "pkcon search name [query]",
+    "info": "pkcon get-details [package]",
+    "list": "pkcon get-packages",
+    "help": "pkcon --help"
+  }
+}

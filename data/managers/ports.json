@@ -1,0 +1,16 @@
+{
+  "name": "ports",
+  "ecosystem": "System (FreeBSD)",
+  "description": "FreeBSD Ports Collection - source-based package system",
+  "commands": {
+    "install": "cd /usr/ports/category/port && make install clean",
+    "remove": "pkg_delete [package]",
+    "update": "portsnap fetch update",
+    "upgrade": "portupgrade -a",
+    "search": "cd /usr/ports && make search name=[query]",
+    "info": "cd /usr/ports/category/port && make showconfig",
+    "list": "pkg_info",
+    "clean": "cd /usr/ports/category/port && make clean",
+    "help": "man ports"
+  }
+}
