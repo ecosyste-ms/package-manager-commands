@@ -31,9 +31,8 @@ Auto-generated from `data/package-managers.json`
 - **System (NixOS/Cross-platform)**: nix
 - **OCaml**: opam
 - **System (Arch Linux)**: pacman
-- **Conda**: pixi
+- **System (Cross-platform)**: pixi, pkgcon, smart
 - **System (FreeBSD)**: pkg, ports
-- **System (Cross-platform)**: pkgcon, smart
 - **System (Slackware)**: pkgtools, slackpkg, slapt-get
 - **Dart**: pub
 - **Erlang**: rebar3
@@ -933,7 +932,7 @@ Auto-generated from `data/package-managers.json`
 
 ### pixi
 
-**Ecosystem**: Conda
+**Ecosystem**: System (Cross-platform)
 
 **Description**: Developer Workflow and Environment Management for Multi-Platform, Language-Agnostic Workspaces
 

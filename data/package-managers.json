@@ -773,7 +773,7 @@
     },
     "pixi": {
       "name": "pixi",
-      "ecosystem": "Conda",
+      "ecosystem": "System (Cross-platform)",
       "description": "Developer Workflow and Environment Management for Multi-Platform, Language-Agnostic Workspaces",
       "commands": {
         "init": "pixi init",
